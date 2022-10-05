@@ -11,5 +11,44 @@
     <h1>Bienvenu sur <img id="imglogo" src="res/logo.png"></h1>
     <div id="divform">
       <h2>Page d'inscription</h2>
+      <form> 
+        <div id="divformcontent">
+            <div class="divinput">
+                <label for="prenom">Prenom : </label>
+                <input type="text" name="prenom" required>  
+            </div>
+            <div class="divinput">
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" required>  
+            </div>
+            <div class="divinput">
+                <label for="email">Adresse mail :</label>
+                <input type="email" name="email" required>  
+            </div>
+            <div class="divinput">
+                <label for="numero">Numéro de téléphone : </label>
+                <input type="tel" name="password" required>  
+            </div>
+            <div class="divinput">
+                <p>Permis de conduire : </p>
+                <label for="permis">oui</label>
+                <input type="radio" name="permis" required> 
+                <label for="permis">non</label>
+                <input type="radio" name="permis" required> 
+            </div>
+          <div class="divinput">
+              <label for="id">Identifiant : </label> 
+              <input type="text" name="id" required> <br>
+          </div>
+          <div class="divinput">
+              <label for="password">Password : </label>
+              <input type="password" name="password" required>  
+          </div>
+          <p id="submit">
+            <input type="submit" name="submit" value="Valider" id="button" accesskey="enter">
+          </p>
+        </div> 
+      </form> 
+    </div>
 </body>
 </html>
