@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(161, 211, 235);
+  
+  }
+  
+  .divinput{
+    margin: 10px;
+  }
+  
+  #divform{
+    margin: auto;
+    margin-top: 5%;
+    border : 3px groove blue;
+    border-radius: 20px / 10px;
+    width: 200px;
+    padding: 2%;
+  
+    
+  }
+  #button{
+    width: 80px;
+    height:40px;
+    background-color:aliceblue;
+    border-radius: 10% ;
+    
+  }
+  #button:hover
+  {
+    background-color:rgb(145, 182, 255);
+  }
+  #button:active{
+    background-color: darkgoldenrod;
+  }
+  
+  #imglogo{
+    margin-top: 50px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #submit{
+    text-align: center;
+  }
+  
+  h1{
+    text-align: center;
+    color: azure;
+    font-family: cursive;
+  }
