@@ -41,7 +41,7 @@ if(isset($_POST['submit']))
         if (isset($mdpCheck['MotDePasse'])) // Si le mot de passe est bon
         {
 
-            header('location:../accueil/Accueil.html');
+            header('location:../accueil/PageAccueil.html');
         }
         else{
             echo 'Mot de passe incorrect';

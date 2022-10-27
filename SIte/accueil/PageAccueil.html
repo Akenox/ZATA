@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PageAccueil.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../res/logo.png">
+    <title>AirPur</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="../res/logo.png" class="logo" alt="">
+            <ul>
+                <li><a href="#">Véhicule</a></li>
+                <li><a href="#">Réservation</a></li>
+                <li><a href="#">Statistique</a></li>
+            </ul>
+            <img src="../res/compte.png" class="compte" alt="">
+        </nav>
+
+        <div class="site-container">
+            <p>Bienvenue sur</p>
+            <h1>AIRPUR</h1>
+            <h4><span class="auto-typing"></span></h4>
+
+            <div class="row"> 
+                <a href="#">Nous contacter</a>
+                <a  href="#">Qu'est-ce que AirPur <span>&#x27f6</span></a>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        let typed = new Typed('.auto-typing',{
+            strings : ["Avançons ensemble pour une meilleure qualité de l'air"],
+            typeSpeed: 50, 
+            backspeed: 100,
+            loop: true,
+            fadeOut: true,
+            fadeOutClass: 'type-fade-out',
+            fadeOutDelay:  3000
+        
+
+        })
+    </script>
+</body>
+</html>
