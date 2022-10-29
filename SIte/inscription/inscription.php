@@ -1,17 +1,25 @@
 <?php
 
+session_start();
 
-/*$bdd = new PDO(
-    'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-    'grp-223',
-    'nkksqopb',
-);*/
 
-$bdd = new PDO(
-    'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-    'root', 
-    '', 
-);
+if ($_SESSION['bdd'] == "local")
+{
+    $bdd = new PDO(
+        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
+        'root', 
+        '' 
+    );
+}
+else
+{
+    $bdd = new PDO(
+        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
+        'grp-223', 
+        'nkksqopb' 
+    );
+}
+
 
 include_once("Inscription.html");
 

@@ -44,13 +44,25 @@ nav .compte {
     cursor: pointer;
     margin-right: 10px;
     text-decoration: none;
-
+    
 }
 
 nav .compte:hover {
     transform: rotateY(150deg);
     transition: 1.2s;
 
+}
+
+ul li  a::after {
+    content: '';
+    background: rgb(1, 99, 177);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transform: translate(-50%, -5px);
+    transition: 0.3s;
 }
 
 nav ul{

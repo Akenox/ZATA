@@ -1,16 +1,30 @@
 <?php
 
-/*$bdd = new PDO(
-    'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-    'grp-223', 
-    'nkksqopb' 
-);*/
+session_start();
 
-$bdd = new PDO(
-    'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-    'root', 
-    '' 
-);
+
+if (isset($_SESSION['login'])){
+    header('location:../accueil/PageAccueil.php');
+}
+
+$_SESSION['bdd'] = "local"; // Mettre "local" si la bdd est en local ou "iut" si l'on uitilise celle de l'iut
+
+if ($_SESSION['bdd'] == "local")
+{
+    $bdd = new PDO(
+        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
+        'root', 
+        '' 
+    );
+}
+else
+{
+    $bdd = new PDO(
+        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
+        'grp-223', 
+        'nkksqopb' 
+    );
+}
 
 include_once("code.html");
 
@@ -40,8 +54,9 @@ if(isset($_POST['submit']))
 
         if (isset($mdpCheck['MotDePasse'])) // Si le mot de passe est bon
         {
-
-            header('location:../accueil/PageAccueil.html');
+            $_SESSION['login'] = $identifiant;
+            header('location:../accueil/PageAccueil.php');
+            
         }
         else{
             echo 'Mot de passe incorrect';
