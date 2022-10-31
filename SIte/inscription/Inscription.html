@@ -4,52 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Inscription.css">
+    <link rel="stylesheet" href="inscription.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../res/logo.png">
     <title>Air Pur</title>
 </head>
 <body>
-    <h1>Bienvenue sur <img id="imglogo" src="../res/logo.png"></h1>
+    <h1><img id="imglogo" src="../res/logo.png"></h1>
     <div id="divform">
-      <h2>Page d'inscription</h2>
+      <h2>Inscription</h2>
+      <br>
+      <br>
       <form action="inscription.php" method="POST"> 
         <div id="divformcontent">
             <div class="divinput">
-                <label for="prenom">Prenom : </label>
-                <input type="text" name="prenom" required>  
+                <input type="text" class="textinput" name="prenom" placeholder="Prénom" required>  
             </div>
             <div class="divinput">
-                <label for="nom">Nom : </label>
-                <input type="text" name="nom" required>  
+                <input type="text" class="textinput" name="nom" placeholder="Nom" required>  
             </div>
             <div class="divinput">
-                <label for="email">Adresse mail :</label>
-                <input type="email" name="email" required>  
+                <input type="email" class="textinput" name="email" placeholder="E-Mail" required>  
             </div>
             <div class="divinput">
-                <label for="numero">Numéro de téléphone : </label>
-                <input type="tel" name="numero" required>  
+                <input type="tel" class="textinput" name="numero" placeholder="Numéro de téléphone" required>  
             </div>
-            <div class="divinput">
-                <p>Permis de conduire : </p>
-                <label for="permis">oui</label>
-                <input type="radio" name="permis" value="1" required> 
-                <label for="permis">non</label>
-                <input type="radio" name="permis" value="0"required> 
-            </div>
+            
           <div class="divinput">
-              <label for="id">Identifiant : </label> 
-              <input type="text" name="id" required> <br>
+              <input type="text" class="textinput" name="id" placeholder="Identifiant" required> <br>
           </div>
           <div class="divinput">
-              <label for="password">Password : </label>
-              <input type="password" name="password" required minlength="6">  
+              <input type="password" class="textinput" name="password" placeholder="Mot de passe" required minlength="6">  
           </div>
+          <div class="divinput">
+            <p id="permistext"> Permis de conduire :
+            <label for="permis">oui</label>
+            <input type="radio" name="permis" value="1" required> 
+            <label for="permis">non</label>
+            <input type="radio" name="permis" value="0"required> 
+            </p>
+        </div>
           <p id="submit">
-            <input type="submit" name="submit" value="Valider" id="button" accesskey="enter">
+            <input id="button" type="submit" name="submit" value="S'inscrire" id="button" accesskey="enter">
           </p>
         </div> 
       </form> 
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>

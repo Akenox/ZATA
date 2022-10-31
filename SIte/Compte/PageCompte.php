@@ -4,7 +4,13 @@ include('PageCompte.html');
 
 session_start();
 
+if (!isset($_SESSION['login']))
+{
+    header('location:../connexion/connexion.html');
+}
+
 $identifiant = $_SESSION['login'];
+
 
 if ($_SESSION['bdd'] == "local")
 {

@@ -21,7 +21,7 @@ else
 }
 
 
-include_once("Inscription.html");
+include_once("inscription.html");
 
 
 
@@ -62,7 +62,7 @@ if(isset($_POST['submit']))
             'Identifiant' => $identifiant,
             'MotDePasse' => $motdepasse,
         ]);
-        header('location:../connexion/code.html');
+        header('location:../connexion/connexion.html');
     }
 
     

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="connexion.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../res/logo.png">
+  <title>Air Pur</title>
+</head>
+<body>
+  <h1><img id="imglogo" src="../res/logo.png"></h1>
+  <div id="divform">
+    <h2>Connexion</h2>
+    <br>
+    <br>
+    <form action="connexion.php" method="POST"> 
+      <div id="divformcontent"> 
+        <div class="divinput">
+            <input type="text" class="textinput" name="id" required v placeholder="Identifiant"> <br>
+        </div>
+        <div class="divinput">
+            <input type="password" name="password" class="textinput" required placeholder="Mot de passe">  
+        </div>
+        <p id="divsubmit">
+          <br>
+          <br>
+          <input type="submit" name="submit" value="Se connecter" id="button" accesskey="enter">
+        </p>
+        
+      </div> 
+    </form> 
+    
+  </div>
+  <p id="pinscrire">Nouveau membre ? <a href="../inscription/inscription.html"> S'inscrire</a></p>
+</body>
+</html>
