@@ -45,7 +45,10 @@ if(isset($_POST['submit']))
     $result = $reqPending->fetch();
     if (isset($result['Identifiant']))
     {
-        echo 'Identifiant déjà utilisé';
+        echo '<style> 
+        #popup{text-align:center; color:red; font-size:large; }
+        #popup::after{content:\'Identifiant déjà utilisé\';} 
+        </style>';
     }
     else 
     {

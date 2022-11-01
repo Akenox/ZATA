@@ -59,12 +59,18 @@ if(isset($_POST['submit']))
             
         }
         else{
-            echo 'Mot de passe incorrect';
+            echo '<style>
+            #popup{text-align:center; color:red; font-size:large; }
+            #popup::after{content:\'Mot de passe incorrect\';}
+            </style>';
         }
             
     }
     else{
-        echo 'Identifiant incorrect';
+        echo '<style> 
+        #popup{text-align:center; color:red; font-size:large; }
+        #popup::after{content:\'Identifiant incorrect\';}
+        </style>';
     }
   
 }

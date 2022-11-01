@@ -42,14 +42,16 @@ $email = $infos['Email'];
 $num = $infos['Numero'];
 $id = $infos['Identifiant'];
 $mdp = $infos['MotDePasse'];
-echo "<div>
+echo "
+
+<div id=\"divform\">
 <ul>
-    <li><a >Nom : </a> $prenom </li>              
-    <li><a >Prénom :</a>$nom</li>
-    <li><a >Email : </a>$email</li>
-    <li><a >Numéro : </a>$num</li>
-    <li><a >Identifiant : </a>$id</li>
-    <li><a >Mot de passe : </a>$mdp</li>
+    <li class=\"oui\"><a >   Nom : </a> <a class=\"infos\"> $prenom </a> </li>              
+    <li class=\"oui\"><a >Prénom :</a><a class=\"infos\"> $nom</a></li>
+    <li class=\"oui\"><a > Email : </a><a class=\"infos\"> $email</a></li>
+    <li class=\"oui\"><a >Numéro : </a><a class=\"infos\"> $num</a></li>
+    <li class=\"oui\"><a >Identifiant     : </a><a class=\"infos\"> $id </li>
+    <li class=\"oui\"><a >Mot de passe : </a><a class=\"infos\"> $mdp </li>
 </ul>
 </div>";
 

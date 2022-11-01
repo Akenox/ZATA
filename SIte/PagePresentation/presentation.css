@@ -1,0 +1,100 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0%;
+    background-color: rgb(45, 189, 189);
+
+}
+
+nav .logo {
+    width: 160px;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+
+
+
+nav .compte {
+    position: relative;
+    width: 70px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    
+}
+
+nav .compte:hover {
+    transform: rotateY(150deg);
+    transition: 1.2s;
+
+}
+
+ul li  a::after {
+    content: '';
+    background: rgb(1, 99, 177);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transform: translate(-50%, -5px);
+    transition: 0.3s;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 40px;
+    text-align: right;
+    list-style-type: none;
+
+}
+
+ul li{
+    margin-right: 10px;
+
+}
+
+ul li a{
+    position: relative;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+}
+
+ul li  a::after {
+    content: '';
+    background: rgb(1, 99, 177);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transform: translate(-50%, -5px);
+    transition: 0.3s;
+}
+
+ul li a:hover::after {
+    width: 38%;
+
+}
+
+ul li a:active::after {
+    transform: translate(-38%, -14px);
+    transition: 0.3s;
+    width: 57%;
+
+}
