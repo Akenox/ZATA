@@ -42,6 +42,10 @@ $email = $infos['Email'];
 $num = $infos['Numero'];
 $id = $infos['Identifiant'];
 $mdp = $infos['MotDePasse'];
+
+$prenom[0] = strtoupper($prenom[0]);
+$nom[0] = strtoupper($nom[0]);
+
 echo "
 
 <div id=\"divform\">
