@@ -7,7 +7,7 @@ if (isset($_SESSION['login'])){
     header('location:../accueil/PageAccueil.php');
 }
 
-$_SESSION['bdd'] = "iut"; // Mettre "local" si la bdd est en local ou "iut" si l'on uitilise celle de l'iut
+$_SESSION['bdd'] = "local"; // Mettre "local" si la bdd est en local ou "iut" si l'on uitilise celle de l'iut
 
 if ($_SESSION['bdd'] == "local")
 {

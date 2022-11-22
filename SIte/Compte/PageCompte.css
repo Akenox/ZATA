@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     outline: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -23,12 +22,12 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     padding: 5px 0%;
-    background-color: rgba(38, 204, 255, 0.5);
+   background-color: rgba(109, 130, 175, 0.5);  
 
 }
 
 nav .logo {
-    width: 100px;
+    width: 130px;
     cursor: pointer;
     margin-left: 30px;
 
@@ -38,7 +37,7 @@ nav .logo {
 
 nav .compte {
     position: relative;
-    width: 70px;
+    width: 55px;
     cursor: pointer;
     margin-right: 10px;
     text-decoration: none;
@@ -51,17 +50,6 @@ nav .compte:hover {
 
 }
 
-nav ul li  a::after {
-    content: '';
-    background: rgb(1, 99, 177);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 3px;
-    transform: translate(-50%, -5px);
-    transition: 0.3s;
-}
 
 nav ul{
     display: flex;
@@ -86,34 +74,47 @@ nav ul li{
 
 }
 
- ul li a{
+ul li a{
     position: relative;
-    padding: 10px 20px; 
+    padding: 20px 40px;
     text-decoration: none;
-    color: white;
-    font-size: 22px;
-   
+    color: black;
+    font-size: 23px;
 }
 
+ul li  a::after {
+    content: '';
+    background: rgb(1, 99, 177);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transform: translate(-50%, -5px);
+    transition: 0.3s;
+}
 
-nav ul li a:hover::after {
-    width: 38%;
+ul li a:hover::after {
+    width: 36%;
 
 }
 
-nav ul li a:active::after {
-    transform: translate(-38%, -6px);
+ul li a:active::after {
+    transform: translate(-38%, -14px);
     transition: 0.3s;
     width: 57%;
 
 }
+
+
 
 .oui {  
     font-size: 0;
     border : 3px ;  
     border-bottom: solid  rgb(1, 99, 177);
     border-radius: 8%;
-    padding: 6%;        
+    padding: 6%;  
+         
 
 }
 
@@ -129,7 +130,8 @@ nav ul li a:active::after {
   }
 
 .infos {
-    font-size: 20px;
+    margin-right: -85px;
+    font-size: 18px;
     font-weight:bold;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -144,7 +146,7 @@ footer {
 
 #copyright{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     border-top: #fff solid 1px;
     padding: 10px;
     

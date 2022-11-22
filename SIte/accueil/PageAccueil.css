@@ -28,7 +28,8 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     padding: 5px 0%;
-   background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);  
+
 
 }
 
@@ -56,17 +57,7 @@ nav .compte:hover {
 
 }
 
-ul li  a::after {
-    content: '';
-    background: rgb(1, 99, 177);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 3px;
-    transform: translate(-50%, -5px);
-    transition: 0.3s;
-}
+
 
 nav ul{
     display: flex;
@@ -87,7 +78,7 @@ ul li a{
     position: relative;
     padding: 20px 40px;
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 23px;
 }
 
