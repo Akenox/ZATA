@@ -210,7 +210,7 @@ footer {
 #needhelplink{
     color: #fff;
     font-size: 17px;
-    margin-left: 90px;
+
 }
 #needhelplink:hover{
     color: goldenrod;
@@ -226,7 +226,7 @@ footer {
 }
 
 #policonf{
-    margin-left: 32%;
+    margin-left: 34%;
     font-size: 17px;
     color: #fff;
 }
@@ -238,7 +238,7 @@ footer {
 }
 
 #langue{
-    margin-left: 35%;
+    margin-left: 38%;
 }
 
 
