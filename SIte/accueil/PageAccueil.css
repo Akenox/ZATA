@@ -186,3 +186,59 @@ ul li a:active::after {
 .row span{
     font-size: 18px;
 }
+
+footer {
+    background-color: #2c4e70;
+    color: #fff;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+
+#copyright{
+    display: flex;
+    justify-content: center;
+    border-top: #fff solid 1px;
+    padding: 10px;
+}
+
+#needhelptext{
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+#needhelplink{
+    color: #fff;
+    font-size: 17px;
+    margin-left: 90px;
+}
+#needhelplink:hover{
+    color: goldenrod;
+}
+#needhelplink:active{
+    color: red;
+}
+
+#divhelp{
+    display: block;
+    padding-bottom: 20px;
+    margin-left: 10px;
+}
+
+#policonf{
+    margin-left: 32%;
+    font-size: 17px;
+    color: #fff;
+}
+#policonf:hover{
+    color: goldenrod;
+}
+#policonf:active{
+    color: red;
+}
+
+#langue{
+    margin-left: 35%;
+}
+
+

@@ -61,6 +61,19 @@ echo "
 
 echo "
 <footer>
+    <div id=\"divhelp\">
+        <span id=\"needhelptext\">Besoin d'aide ? </span>
+        <a id=\"needhelplink\" href=\"#\">Contactez-nous !</a> 
+        <a id=\"policonf\" href=\"#\">Politique de confidentialité<a>
+        <span id=\"langue\">
+            <label for=\"langues\">Langue:</label>
+            <select name=\"langues\" id=\"\">
+            <option value=\"\">Français</option>
+            <option value=\"\">Anglais</option>
+            </select>
+        </span>
+    </div>
+    
     <p id=\"copyright\">Copyright 2022 -- AirPur -- Tous droits réservés</p>
 
 </footer>
