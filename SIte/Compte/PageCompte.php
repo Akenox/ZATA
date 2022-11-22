@@ -42,6 +42,7 @@ $email = $infos['Email'];
 $num = $infos['Numero'];
 $id = $infos['Identifiant'];
 $mdp = $infos['MotDePasse'];
+$naissance = $infos['DateDeNaissance'];
 
 $prenom[0] = strtoupper($prenom[0]);
 $nom[0] = strtoupper($nom[0]);
@@ -54,6 +55,7 @@ echo "
     <li class=\"oui\"><a >Prénom :</a><a class=\"infos\"> $nom</a></li>
     <li class=\"oui\"><a > Email : </a><a class=\"infos\"> $email</a></li>
     <li class=\"oui\"><a >Numéro : </a><a class=\"infos\"> $num</a></li>
+    <li class=\"oui\"><a >Date de naissance : </a><a class=\"infos\"> $naissance </li>
     <li class=\"oui\"><a >Identifiant     : </a><a class=\"infos\"> $id </li>
     <li class=\"oui\"><a >Mot de passe : </a><a class=\"infos\"> $mdp </li>
 </ul>

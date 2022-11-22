@@ -82,7 +82,7 @@ ul li a{
     font-size: 23px;
 }
 
-ul li  a::after {
+.animation::after {
     content: '';
     background: rgb(1, 99, 177);
     position: absolute;
@@ -94,12 +94,12 @@ ul li  a::after {
     transition: 0.3s;
 }
 
-ul li a:hover::after {
+.animation:hover::after {
     width: 36%;
 
 }
 
-ul li a:active::after {
+.animation:active::after {
     transform: translate(-38%, -14px);
     transition: 0.3s;
     width: 57%;

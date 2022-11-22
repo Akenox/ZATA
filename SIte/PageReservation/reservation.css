@@ -6,6 +6,17 @@
     outline: none;
 }
 
+html, body {
+    background-color: rgb(240,240,240);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}   
+
 .container {
     position: relative;
     height: 100vh;
@@ -150,4 +161,107 @@ footer {
     border-top: #fff solid 1px;
     padding: 10px;
     
+}
+
+
+
+#cld {
+    width: 60%;
+    height: 80%;
+    background-color: rgb(118,118,118); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#entetecld{
+    width: 100%;
+    height: 18%;
+    background-color: rgb(124,124,124);
+    display: flex;
+    flex-direction: column;
+}
+
+#cldt{
+    width: 100%;
+    height: 66.66%;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#avantapres{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(60,60,60);
+}
+
+.cldbtn{
+    width: 40%;
+    height: 100%;
+    border: none;
+    background-color: rgb(90,90,90);
+    color: white;
+    outline: none;
+    transition: 0.2s;
+}
+
+.cldbtn:hover{
+    background-color: rgba(75,75,75);
+}
+
+#cldboite{
+    width: 100%;
+    height: 82%;  
+    background-color: rgb(143,143,143); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#jour{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jour {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0;
+    font-size: 18px; 
+}
+
+.semaine {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.case {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+    color: white;
+    margin: 0;
+    font-size: 19px;
+}
+
+.case:hover {
+    background-color: rgb(110,110,110);
 }

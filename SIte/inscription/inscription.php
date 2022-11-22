@@ -34,6 +34,7 @@ if(isset($_POST['submit']))
     $numero = $_POST['numero'];
     $identifiant = $_POST['id'];
     $motdepasse = $_POST['password'];
+    $naissance = $_POST['naissance'];
 
     $reqIdExists = 'SELECT Identifiant FROM Compte WHERE Identifiant = :idTyped';
     $reqPending = $bdd->prepare($reqIdExists);
@@ -51,7 +52,7 @@ if(isset($_POST['submit']))
     }
     else 
     {
-        $requete = 'INSERT INTO Compte(Prenom, Nom, Email, Numero, Identifiant, MotDePasse)  VALUES (:Prenom, :Nom, :Email, :Numero, :Identifiant, :MotDePasse)';
+        $requete = 'INSERT INTO Compte(Prenom, Nom, Email, Numero, Identifiant, MotDePasse, DateDeNaissance)  VALUES (:Prenom, :Nom, :Email, :Numero, :Identifiant, :MotDePasse, :DateDeNaissance)';
 
         $insertRecipe = $bdd->prepare($requete);
 
@@ -62,6 +63,7 @@ if(isset($_POST['submit']))
             'Numero' => $numero,
             'Identifiant' => $identifiant,
             'MotDePasse' => $motdepasse,
+            'DateDeNaissance' => $naissance,
         ]);
         header('location:../connexion/connexion.html');
     }
