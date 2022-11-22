@@ -1,6 +1,6 @@
 body{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-image: url("../res/fond.jpg");
+  background-image: url("../res/font.png");
   }
   
 h2{
@@ -14,7 +14,7 @@ h2{
   
 #divform{
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2%;
   padding: 2%;
   background-color:rgba(12, 12, 12, 0.2);
   border-radius: 20px;
@@ -23,7 +23,7 @@ h2{
 
 #button{
   display: inline-block;
-  background-color: rgb(30, 201, 186);
+  background-color: rgb(11, 171, 211);
   border-radius: 10px;
   border: 4px double rgb(255, 255, 255);
   color: rgb(255, 255, 255);
@@ -46,7 +46,7 @@ h2{
 }
   
 #imglogo{
-  margin-top: 50px;
+  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -71,12 +71,9 @@ h1{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#permistext{
-  color: rgb(100, 98, 98);
-  font-size: 17px;
-  background-color: white;
-  border-radius: 30px;
-  padding: 10px;
-  
+
+
+#pconnexion{
+  text-align: center;
 }
 

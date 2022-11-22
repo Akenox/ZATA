@@ -13,7 +13,6 @@
     <div id="divform">
       <h2>Inscription</h2>
       <br>
-      <br>
       <form action="inscription.php" method="POST"> 
         <div id="divformcontent">
             <div class="divinput">
@@ -35,13 +34,6 @@
           <div class="divinput">
               <input type="password" class="textinput" name="password" placeholder="Mot de passe" required minlength="6">  
           </div>
-          <div class="divinput">
-            <p id="permistext"> Permis de conduire :
-            <label for="permis">oui</label>
-            <input type="radio" name="permis" value="1" required> 
-            <label for="permis">non</label>
-            <input type="radio" name="permis" value="0"required> 
-            </p>
         </div>
           <p id="submit">
             <input id="button" type="submit" name="submit" value="S'inscrire" id="button" accesskey="enter">
@@ -50,6 +42,7 @@
         <p id="popup">
           
         </p>
+        <p id="pconnexion">Déjà inscrit ? <a href="../connexion/connexion.php"> Se connecter</a></p>
       </form> 
     </div>
     <br>

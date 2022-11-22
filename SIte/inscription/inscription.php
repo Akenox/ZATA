@@ -32,7 +32,6 @@ if(isset($_POST['submit']))
     $nom = $_POST['nom'];
     $email = $_POST['email'];
     $numero = $_POST['numero'];
-    $permis = $_POST['permis'];
     $identifiant = $_POST['id'];
     $motdepasse = $_POST['password'];
 
@@ -52,7 +51,7 @@ if(isset($_POST['submit']))
     }
     else 
     {
-        $requete = 'INSERT INTO Compte(Prenom, Nom, Email, Numero, Permis, Identifiant, MotDePasse)  VALUES (:Prenom, :Nom, :Email, :Numero, :Permis, :Identifiant, :MotDePasse)';
+        $requete = 'INSERT INTO Compte(Prenom, Nom, Email, Numero, Identifiant, MotDePasse)  VALUES (:Prenom, :Nom, :Email, :Numero, :Identifiant, :MotDePasse)';
 
         $insertRecipe = $bdd->prepare($requete);
 
@@ -61,7 +60,6 @@ if(isset($_POST['submit']))
             'Nom' => $nom,
             'Email' => $email,
             'Numero' => $numero,
-            'Permis' => $permis,
             'Identifiant' => $identifiant,
             'MotDePasse' => $motdepasse,
         ]);

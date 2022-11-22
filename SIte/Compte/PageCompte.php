@@ -59,6 +59,13 @@ echo "
 </ul>
 </div>";
 
+echo "
+<footer>
+    <p id=\"copyright\">Copyright 2022 -- AirPur -- Tous droits réservés</p>
+
+</footer>
+"
+
 
 
 
