@@ -1,3 +1,5 @@
+
+
 <?php
 
 include('PageCompte.html');
@@ -47,6 +49,11 @@ $naissance = $infos['DateDeNaissance'];
 $prenom[0] = strtoupper($prenom[0]);
 $nom[0] = strtoupper($nom[0]);
 
+
+
+
+
+
 echo "
 
 <div id=\"divform\">
@@ -57,28 +64,28 @@ echo "
     <li class=\"oui\"><a >Numéro : </a><a class=\"infos\"> $num</a></li>
     <li class=\"oui\"><a >Date de naissance : </a><a class=\"infos\"> $naissance </li>
     <li class=\"oui\"><a >Identifiant     : </a><a class=\"infos\"> $id </li>
-    <li class=\"oui\"><a >Mot de passe : </a><a class=\"infos\"> $mdp </li>
+    <li class=\"oui\"><a >Mot de passe : </a><a class=\"infos\">$mdp</li>
 </ul>
 </div>";
 
 echo "
 <footer>
-    <div id=\"divhelp\">
-        <span id=\"needhelptext\">Besoin d'aide ? </span>
-        <a id=\"needhelplink\" href=\"#\">Contactez-nous !</a> 
-        <a id=\"policonf\" href=\"#\">Politique de confidentialité<a>
-        <span id=\"langue\">
+    <div id=\"divtopfooter\">
+        <div id=\"divhelp\">
+            <span id=\"needhelptext\">Besoin d'aide ? </span>
+            <a id=\"needhelplink\" href=\"#\">Contactez-nous !</a> 
+        </div>
+        <a id=\"policonf\" href=\"../PoliConf/policonf.html\">Politique de confidentialité<a>
+        <div id=\"langue\">
             <label for=\"langues\">Langue:</label>
             <select name=\"langues\" id=\"\">
             <option value=\"\">Français</option>
             <option value=\"\">Anglais</option>
             </select>
-        </span>
-    </div>
-    
+        </div>
+    </div>      
     <p id=\"copyright\">Copyright 2022 -- AirPur -- Tous droits réservés</p>
-
-</footer>
+</footer> 
 "
 
 
