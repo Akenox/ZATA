@@ -52,7 +52,7 @@ $requete->execute([
 if (isset($_POST['submit']))
 {
     require_once('AddCar.html');
-    
+
 }
 
 ?>

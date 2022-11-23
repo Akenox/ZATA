@@ -34,7 +34,7 @@ function table_ok($table, $bdd){
 
 if(!table_ok("Vehicule", $bdd))
 {
-    $req = "CREATE TABLE vehicule (
+    $req = "CREATE TABLE Vehicule (
         ID int(10) NOT NULL,
         Marque varchar(45) NOT NULL,
         Modele varchar(45) NOT NULL,
@@ -48,7 +48,21 @@ if(!table_ok("Vehicule", $bdd))
         AgeParc float NOT NULL
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     $req = $bdd->prepare($req);
-    $req->execute();  
+    $req->execute(); 
+    
+    $req = "ALTER TABLE Vehicule ADD PRIMARY KEY (ID);";
+    $req = $bdd->prepare($req);
+    $req->execute(); 
+
+    $req = "ALTER TABLE Vehicule MODIFY ID int(10) NOT NULL AUTO_INCREMENT";
+    $req = $bdd->prepare($req);
+    $req->execute(); 
+
+    $req = "COMMIT";
+    $req = $bdd->prepare($req);
+    $req->execute(); 
+
+    
 }
 else{
     echo "exsiste deja";
