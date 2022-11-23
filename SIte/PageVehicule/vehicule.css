@@ -138,19 +138,27 @@ ul li a:active::after {
 
 }
 
-footer {
-    margin-top: 100px;
-    background-color: #2c4e70;
-    color: #fff;
-}
 
-#copyright{
-    display: flex;
-    justify-content: left;
-    border-top: #fff solid 1px;
-    padding: 10px;
+
+
+
+#listcar{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
     
 }
+#listcar > td,th,tr{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#addcar{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 /*----------FOOTER----------*/
 
