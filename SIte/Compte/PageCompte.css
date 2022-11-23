@@ -138,10 +138,13 @@ ul li a{
 
 }
 
+/*----------FOOTER----------*/
+
 footer {
     background-color: #2c4e70;
     color: #fff;
     font-size: 15px;
+    padding-top: 10px;
 }
 
 
@@ -156,11 +159,13 @@ footer {
     color: white;
     font-size: 15px;
     font-weight: 100;
+    margin-left: 80px;
 }
 #needhelplink{
     color: #fff;
     font-size: 17px;
     margin-left: 90px;
+
 }
 #needhelplink:hover{
     color: goldenrod;
@@ -170,13 +175,14 @@ footer {
 }
 
 #divhelp{
-    display: block;
-    padding-bottom: 20px;
+    
     margin-left: 10px;
 }
 
+
 #policonf{
-    margin-left: 32%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 17px;
     color: #fff;
 }
@@ -188,7 +194,14 @@ footer {
 }
 
 #langue{
-    margin-left: 38%;
+
+    margin-left: auto;
+    margin-right: 10px;
 }
 
+#divtopfooter{
+    display: flex;
+    padding-bottom: 20px; 
+}
 
+/*----------FOOTER----------*/
