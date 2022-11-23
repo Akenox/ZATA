@@ -4,43 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AddCar.css">
     <title>Document</title>
 </head>
 <body>
     <h2>Ajouter un véhicule</h2>
-    <form action="PageConso" method="POST">
+    <form action="AddCar.php" method="POST">
 
         <label for="marque">Marque : </label>
         <input name="marque" type="text">
-
+        <br>
         <label for="modele">Modele : </label>
         <input name="modele" type="text">
-
+        <br>
         <label for="immatriculation">Immatriculation : </label>
         <input name="immatriculation" type="text">
-
+        <br>
         <label for="site">Site : </label>
         <input name="site" type="text">
-
+        <br>
         <label for="carburant">Carburant : </label>
         <input name="carburant" type="text">
-
+        <br>
         <label for="miseenservice">Date de mise en service : </label>
         <input name="miseenservice" type="date">
-
+        <br>
         <label for="critair">Vignette critair : </label>
         <input name="critair" type="text">
-
+        <br>
         <label for="assurance">Assurance : </label>
-        <input name="assurance" type="text">
-
+        <input name="assurance" type="number">
+        <br>
         <label for="puissance">Puissance : </label>
-        <input name="puissance" type="text">
-
+        <input name="puissance" type="number">
+        <br>
         <label for="ageparc">Age du parc : </label>
-        <input name="ageparc" type="text">
+        <input name="ageparc" type="number">
+        <br>
+        <input name="submit" type="submit" value="Valider">
 
     </form>
+
+    <a id="retour" href="../vehicule.php"> Retour </a>
     
 </body>
 </html>
