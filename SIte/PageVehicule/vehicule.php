@@ -19,6 +19,44 @@ else
     );
 }
 
+function table_ok($table, $bdd){
+    $req = "SELECT 1 from $table";
+    $req = $bdd->prepare($req);  
+    $req->execute();
+    $req->fetch();
+    if ($req == NULL)
+    {
+       return false;
+    }
+    else 
+    {
+        return true;
+    }
+
+}
+
+if(!table_ok("Vehicule", $bdd))
+{
+    $req = "CREATE TABLE 'vehicule' (
+        'ID' int(10) NOT NULL,
+        'Marque' varchar(45) NOT NULL,
+        'Modele' varchar(45) NOT NULL,
+        'Immatriculation' varchar(15) NOT NULL,
+        'Site' varchar(45) NOT NULL,
+        'Carburant' varchar(45) NOT NULL,
+        'MiseEnService' date NOT NULL,
+        'Critair' int(11) NOT NULL,
+        'Assurance' year(4) NOT NULL,
+        'Puissance' int(11) NOT NULL,
+        'AgeParc' float NOT NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
+    $req = $req->prepare();
+    $req->execute();  
+}
+else{
+    echo "exsiste deja";
+}
+
 
 function CarTable($bdd) : string
 {
