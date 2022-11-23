@@ -20,41 +20,39 @@ else
 }
 
 function table_ok($table, $bdd){
-    $req = "SELECT 1 from $table";
-    $req = $bdd->prepare($req);  
-    $req->execute();
-    $req->fetch();
-    if ($req == NULL)
-    {
-       return false;
-    }
-    else 
+    $req = $bdd->query("SHOW TABLES LIKE '$table'");
+    $tableExists = $req !== false && $req->rowCount() > 0;
+    if ($tableExists)
     {
         return true;
+    }
+    else{
+        return false;
     }
 
 }
 
 if(!table_ok("Vehicule", $bdd))
 {
-    $req = "CREATE TABLE 'vehicule' (
-        'ID' int(10) NOT NULL,
-        'Marque' varchar(45) NOT NULL,
-        'Modele' varchar(45) NOT NULL,
-        'Immatriculation' varchar(15) NOT NULL,
-        'Site' varchar(45) NOT NULL,
-        'Carburant' varchar(45) NOT NULL,
-        'MiseEnService' date NOT NULL,
-        'Critair' int(11) NOT NULL,
-        'Assurance' year(4) NOT NULL,
-        'Puissance' int(11) NOT NULL,
-        'AgeParc' float NOT NULL
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
-    $req = $req->prepare();
+    $req = "CREATE TABLE vehicule (
+        ID int(10) NOT NULL,
+        Marque varchar(45) NOT NULL,
+        Modele varchar(45) NOT NULL,
+        Immatriculation varchar(15) NOT NULL,
+        Site varchar(45) NOT NULL,
+        Carburant varchar(45) NOT NULL,
+        MiseEnService date NOT NULL,
+        Critair int(11) NOT NULL,
+        Assurance year(4) NOT NULL,
+        Puissance int(11) NOT NULL,
+        AgeParc float NOT NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+    $req = $bdd->prepare($req);
     $req->execute();  
 }
 else{
     echo "exsiste deja";
+    echo (table_ok("Vehicule", $bdd));
 }
 
 
