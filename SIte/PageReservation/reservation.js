@@ -2,7 +2,7 @@ let Case = document.getElementsByClassName('case')
 
 let date = new Date();
 let year = date.getFullYear();
-let month = date.getMonth() + 1;
+let month = date.getMonth() ;
 let day = date.getDate();
 
 const monthName = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "ocotbre", "novembre", "décembre"];
@@ -32,7 +32,7 @@ function  CALENDRIER_REDUCER(action) {
             break;
 
     }   
-    calendrier(year, month)
+ calendrier(year, month)
 }
 
 document.getElementById('avant').onclick = function () {
@@ -87,4 +87,4 @@ function getFévrierLength(year){
    
 }
 
-calendrier()
+calendrier(year, month)
