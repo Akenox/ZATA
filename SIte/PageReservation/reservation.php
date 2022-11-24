@@ -50,6 +50,7 @@
        $date = new Date();
        $year = date('Y');
 
+
        $events = $date->getEvents($year);
        $dates = $date->getAll($year);
         
@@ -58,6 +59,29 @@
     <div class="periods">
         <div class="year"><?php echo $year?> </div>
         <div class="months">
+
+        <form action="config.php" method="POST"> 
+                    <div id="divform" > 
+                        <div class="divinput">
+                            <input type="text"  class="textinput" name="nom" required  placeholder="Véhicule"> <br>
+                        </div>
+                        <div class="divinput">
+                            <input type="date"  class="textinput" name="date"  required placeholder="Date de réservation">  
+                        </div>
+                        <div class="divinput">
+                            <input type="number"  class="textinput" name="numbe"  required placeholder="Nombre de personne">  
+                        </div>
+                        <p id="submit">
+                        <br>
+                        <br>
+                          <input class="button" type="submit" name="submit" value="Réserver" accesskey="enter">
+                        </p>
+                        
+                    </div> 
+                 <p id="popup"></p>
+            </form> 
+
+
             <ul>
                 <?php foreach ($date->months as $id=>$m): ?>
                     <li><a class="calend" href="#" id="linkMonth<?php echo $id+1; ?>"><?php echo utf8_encode(substr(utf8_decode($m), 0, 3)); ?> </a> </li>
@@ -107,11 +131,12 @@
                     </tr>
                 </tbody>
             </table>
+
+
             </div>
             <?php endforeach; ?>
     </div>
-    <div class="clear"></div>
-     <pre><?php  print_r($events);  ?></pre>
+
 
     <footer>
         <div id="divtopfooter">

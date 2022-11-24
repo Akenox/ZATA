@@ -176,12 +176,70 @@ table td:hover .events{  position:absolute;  left:32%;  top:50%;  width:442px;  
 table td:hover .events li{  height:40px;  line-height:40px;  font-weight:bold;  border-bottom:1px solid #D6D6D6;  padding-left:41px;  text-indent:0;  background:none;  width:500px;}
 table td:hover .events li:first-child{  border-top:1px solid #D6D6D6;}
 table td .daytitle{  display:none;}
-table td:hover .daytitle{  position: absolute; left:582px;  top: 45%;  width:442px;  list-style:none;  margin:auto; margin-left: 2%; padding:0px;  color:black;  font-size:41px;  display:block;  font-weight:bold;}
+table td:hover .daytitle{  position: absolute; left:582px;  top: 45%;  width:442px;  list-style:none;  margin:auto; margin-left: 2%; padding:0px;  color:black;  font-size:30px;  display:block;  font-weight:bold;}
 .clear{  clear:both;}
 
 
 /*--------calendrier-------*/
 
+
+/*--------Fomrulaire--------*/
+
+
+.divinput{
+    margin: 30px;
+
+
+  }
+    
+  #divform{
+    margin: auto;
+    margin-top: 2%;
+    padding: 2%;
+    background-color:rgba(12, 12, 12, 0.2);
+    border-radius: 20px;
+    width: fit-content;
+    position: absolute;
+    left:60%; 
+    top: 30%;
+  }
+  
+  .textinput{
+    border-radius: 30px;
+    height: 40px;
+    width: 300px;
+    text-indent: 10px;
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  #submit{
+    text-align: center;
+  }
+
+  .button{
+    display: inline-block;
+    background-color: rgb(11, 171, 211);
+    border-radius: 10px;
+    border: 4px double rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button:hover{
+    background-color:rgb(145, 182, 255);
+  }
+  
+  .button:active{
+    background-color: darkgoldenrod;
+  }
 /*----------FOOTER----------*/
 
 footer {

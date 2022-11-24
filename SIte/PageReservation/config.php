@@ -29,5 +29,32 @@ else
 }
 
 
+if(isset($_POST['submit']))
+{
+    $reqInfo = 'SELECT * FROM Compte WHERE Identifiant = :idSearch';
+    $reqPending = $bdd->prepare($reqInfo);
+    $reqPending->execute([
+    'idSearch' => $identifiant,
+    ]);
+    $infos = $reqPending->fetch();
 
+    $nom = $infos['Nom'];
+    $vehicule = $_POST['nom'];
+    $date = $_POST['date'];
+    $covoit = $_POST['numbe'];
+
+
+    $requete = 'INSERT INTO reservation(Nom, date, Véhicule, Nombre_covoit)  VALUES (?, ?, ?, ?)';
+
+    $insertRecipe = $bdd->prepare($requete);
+
+    $insertRecipe->execute([
+        $nom,
+        $date,   
+        $vehicule,  
+        $covoit,
+    ]);
+
+    header('location:../PageReservation/reservation.php');
+}
 ?>
