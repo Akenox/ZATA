@@ -1,23 +1,11 @@
 <?php
 
-session_start();
 
-if ($_SESSION['bdd'] == "local")
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'root', 
-        '' 
-    );
-}
-else
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'grp-223', 
-        'nkksqopb' 
-    );
-}
+
+session_start();
+require_once('../fonctions.php');
+$bdd = Fonctions::InitBDD();
+Fonctions::CheckIfNotLoggedIn($_SESSION['login']);
 
 function table_ok($table, $bdd){
     $req = $bdd->query("SHOW TABLES LIKE '$table'");
@@ -32,9 +20,15 @@ function table_ok($table, $bdd){
 
 }
 
+function Detail()
+{
+    echo "Fonction activée";
+    header('location: PageDetails/detail.html');
+}
+
 if(!table_ok("Vehicule", $bdd))
 {
-    $req = "CREATE TABLE Vehicule (
+    /*$req = "CREATE TABLE Vehicule (
         ID int(10) NOT NULL,
         Marque varchar(45) NOT NULL,
         Modele varchar(45) NOT NULL,
@@ -48,19 +42,29 @@ if(!table_ok("Vehicule", $bdd))
         AgeParc float NOT NULL
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     $req = $bdd->prepare($req);
-    $req->execute(); 
+    $req->execute();*/
+    Fonctions::RequeteSQLExecute($bdd,
+        "CREATE TABLE Vehicule (
+            ID int(10) NOT NULL,
+            Marque varchar(45) NOT NULL,
+            Modele varchar(45) NOT NULL,
+            Immatriculation varchar(15) NOT NULL,
+            Site varchar(45) NOT NULL,
+            Carburant varchar(45) NOT NULL,
+            MiseEnService date NOT NULL,
+            Critair int(11) NOT NULL,
+            Assurance year(4) NOT NULL,
+            Puissance int(11) NOT NULL,
+            AgeParc float NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
     
-    $req = "ALTER TABLE Vehicule ADD PRIMARY KEY (ID);";
-    $req = $bdd->prepare($req);
-    $req->execute(); 
 
-    $req = "ALTER TABLE Vehicule MODIFY ID int(10) NOT NULL AUTO_INCREMENT";
-    $req = $bdd->prepare($req);
-    $req->execute(); 
+    Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vehicule ADD PRIMARY KEY (ID);");
 
-    $req = "COMMIT";
-    $req = $bdd->prepare($req);
-    $req->execute(); 
+    Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vehicule MODIFY ID int(10) NOT NULL AUTO_INCREMENT",$bdd);
+    
+    Fonctions::RequeteSQLExecute($bdd,"COMMIT");
+
 
     
 }
@@ -71,13 +75,15 @@ function CarTable($bdd) : string
 {
     $bool = true;
     $res = "";
-    $i = 1;
+    $i[0] = 2;
     while($bool)
     {
-        $req = 'SELECT*FROM Vehicule WHERE ID = :i';
+        /*$req = 'SELECT*FROM Vehicule WHERE ID = :i';
         $reqPending = $bdd->prepare($req);
         $reqPending->execute(['i' => $i]);
-        $reqres = $reqPending->fetch();
+        $reqres = $reqPending->fetch();*/
+
+        $reqres = Fonctions::RequeteSQLFetch($bdd, 'SELECT*FROM Vehicule WHERE ID = ?', $i);
         if (isset($reqres[1]))
         {
             $res .= "<tr>
@@ -91,9 +97,10 @@ function CarTable($bdd) : string
                     <td>" . $reqres[8] . "</td>
                     <td>" . $reqres[9] . "</td>
                     <td>" . $reqres[10] . "</td>
+                    " . /*<td> <button onclick=\"details($reqres[0]);\">Details</button>*/"
                   <tr>
                     ";
-            $i++;
+            $i[0]++;
         }
         else{
             $bool = false;
@@ -115,6 +122,13 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vehicule.css">
     <title>Document</title>
+    <script>
+        function details(id)
+        {
+            document.location.href="PageDetails/detail.php";
+            $_SESSION['idCar'] = id;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -144,6 +158,7 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
             <th>Assurance</th>
             <th>Puissance</th>
             <th>Age Parc</th>
+           <!-- <th>Details</th> -->
         <tr>
     
 

@@ -1,14 +1,11 @@
 <?php
 
-
+require_once('../Fonctions.php')
 
 session_start();
 
 
-if (!isset($_SESSION['login']))
-{
-    header('location:../connexion/connexion.html');
-}
+Fonctions::CheckIfNotLoggedIn($_SESSION['login']);
 include('PageAccueil.html');
 
 ?>

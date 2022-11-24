@@ -1,35 +1,16 @@
 
 
 <?php
-
+require_once('../fonctions.php');
 include('PageCompte.html');
 
 session_start();
 
-if (!isset($_SESSION['login']))
-{
-    header('location:../connexion/connexion.html');
-}
+Fonctions::CheckIfNotLoggedIn($_SESSION['login']);
 
 $identifiant = $_SESSION['login'];
 
-
-if ($_SESSION['bdd'] == "local")
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'root', 
-        '' 
-    );
-}
-else
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'grp-223', 
-        'nkksqopb' 
-    );
-}
+$bdd = Fonctions::InitBDD();
 
 $reqInfo = 'SELECT * FROM Compte WHERE Identifiant = :idSearch';
 $reqPending = $bdd->prepare($reqInfo);

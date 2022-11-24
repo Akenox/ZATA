@@ -2,22 +2,11 @@
 
 session_start();
 
-if ($_SESSION['bdd'] == "local")
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'root', 
-        '' 
-    );
-}
-else
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'grp-223', 
-        'nkksqopb' 
-    );
-}
+
+require_once('../../fonctions.php');
+$bdd = Fonctions::InitBDD();
+
+
 
 $marque = $_POST['marque'];
 $modele = $_POST['modele'];
