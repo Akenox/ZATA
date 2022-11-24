@@ -64,10 +64,7 @@ if(!table_ok("Vehicule", $bdd))
 
     
 }
-else{
-    echo "exsiste deja";
-    echo (table_ok("Vehicule", $bdd));
-}
+
 
 
 function CarTable($bdd) : string
