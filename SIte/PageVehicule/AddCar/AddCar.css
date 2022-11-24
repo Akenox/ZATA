@@ -236,7 +236,7 @@ footer {
 {
     margin-left: 40%;
     width:700px;
-    height: 74.6%;
+    height: 74%;
     background:#e6e6e68f
     ;border-radius:8px;
     margin-bottom: 2%;
@@ -257,18 +257,34 @@ h2
     border-bottom:3px solid #78788c;
 }
 
+
+label
+{
+    font-family:'Montserrat',sans-serif;
+    font-size: large;
+}
+
 input
 {
+    
     width:100%;
-    padding:20px;
+    padding: 15px;
     box-sizing:border-box;
     background:none;
     outline:none;
     resize:none;
     border: 0;
     font-family:'Montserrat',sans-serif;
+    font-size: 15px;
+    margin-top : -2px;
     transition:all .3s;
     border-bottom:2px solid #bebed2;
+}
+
+input:hover
+{
+    background : #c7c5c5;
+    color : #000000 ; 
 }
 
 p:before
@@ -280,7 +296,7 @@ p:before
     color:#5a5a5a
 }
 
-button
+.button
 {
     float:right;
     padding:8px 12px;
@@ -289,19 +305,25 @@ button
     border:2px solid #78788c;
     background:0;
     color:#5a5a6e;
+    margin-top: 50px;
     cursor:pointer;
-    transition:all .3s;
+    transition:all .3s
 }
-button:hover
+
+.button:hover
 {
-    background:#78788c;
-    color:#fff;
+    
+    background-color: #808080;
+    color:rgb(0, 0, 0);
+    
 }
 
 span
 {
     margin:0 5px 0 15px;
 }
+
+
 
 
 /*----------FORMS----------*/

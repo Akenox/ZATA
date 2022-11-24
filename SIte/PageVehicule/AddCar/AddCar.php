@@ -38,10 +38,17 @@ $requete->execute([
 
 ]);
 
+echo    
+    '<style>
+        #popup{text-align:center; color:green; font-size:15px; margin-top: 1px;}
+        #popup:after{content:\'La voiture à bien été enregistré !\'; }
+    </style>';
+
 if (isset($_POST['submit']))
 {
     require_once('AddCar.html');
-
 }
+
+
 
 ?>
