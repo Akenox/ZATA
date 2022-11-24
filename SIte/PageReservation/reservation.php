@@ -117,7 +117,9 @@
                                 </div>
                                 <div class="events">
                                     <?php  if(isset($events[$time])) : foreach($events[$time] as $e):  ?>
-                                        <li> <?php  echo $e; ?></li> 
+                                        <li> <?php  echo $e; ?>
+                                        <a href="#">Annuler ma réservation</a>
+                                        </li> 
                                     <?php endforeach; endif;?>
                                 </div>
                             </td>
