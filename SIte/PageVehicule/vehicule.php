@@ -28,21 +28,6 @@ function Detail()
 
 if(!table_ok("Vehicule", $bdd))
 {
-    /*$req = "CREATE TABLE Vehicule (
-        ID int(10) NOT NULL,
-        Marque varchar(45) NOT NULL,
-        Modele varchar(45) NOT NULL,
-        Immatriculation varchar(15) NOT NULL,
-        Site varchar(45) NOT NULL,
-        Carburant varchar(45) NOT NULL,
-        MiseEnService date NOT NULL,
-        Critair int(11) NOT NULL,
-        Assurance year(4) NOT NULL,
-        Puissance int(11) NOT NULL,
-        AgeParc float NOT NULL
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
-    $req = $bdd->prepare($req);
-    $req->execute();*/
     Fonctions::RequeteSQLExecute($bdd,
         "CREATE TABLE Vehicule (
             ID int(10) NOT NULL,
@@ -78,10 +63,7 @@ function CarTable($bdd) : string
     $i[0] = 2;
     while($bool)
     {
-        /*$req = 'SELECT*FROM Vehicule WHERE ID = :i';
-        $reqPending = $bdd->prepare($req);
-        $reqPending->execute(['i' => $i]);
-        $reqres = $reqPending->fetch();*/
+
 
         $reqres = Fonctions::RequeteSQLFetch($bdd, 'SELECT*FROM Vehicule WHERE ID = ?', $i);
         if (isset($reqres[1]))
@@ -97,7 +79,7 @@ function CarTable($bdd) : string
                     <td>" . $reqres[8] . "</td>
                     <td>" . $reqres[9] . "</td>
                     <td>" . $reqres[10] . "</td>
-                    " . /*<td> <button onclick=\"details($reqres[0]);\">Details</button>*/"
+                    <td> <button onclick=\"details($reqres[0]);\">Details</button>
                   <tr>
                     ";
             $i[0]++;
