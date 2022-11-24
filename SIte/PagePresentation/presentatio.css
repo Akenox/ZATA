@@ -1,14 +1,23 @@
-body{
-    background-color: rgb(182, 182, 182);
-}
-
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: none;
-    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: auto;
+    background-position: center;
+
+
+}
+
+.fontdepage
+{
+    background-color: #fff;
 }
 
 nav{
@@ -17,14 +26,14 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     padding: 5px 0%;
-    background-color: rgb(32, 210, 255);
+   background-color: rgba(109, 130, 175, 0.5);  
 
 }
 
 nav .logo {
-    width: 160px;
+    width: 130px;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 30px;
 
 }
 
@@ -32,7 +41,7 @@ nav .logo {
 
 nav .compte {
     position: relative;
-    width: 70px;
+    width: 55px;
     cursor: pointer;
     margin-right: 10px;
     text-decoration: none;
@@ -45,17 +54,6 @@ nav .compte:hover {
 
 }
 
-ul li  a::after {
-    content: '';
-    background: rgb(1, 99, 177);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 3px;
-    transform: translate(-50%, -5px);
-    transition: 0.3s;
-}
 
 nav ul{
     display: flex;
@@ -67,7 +65,15 @@ nav ul{
 
 }
 
-ul li{
+h1 {
+    margin-top: 3%;
+    font-size: 55px;
+    font-weight:100;
+    text-align: center;
+
+}
+
+nav ul li{
     margin-right: 10px;
 
 }
@@ -76,8 +82,8 @@ ul li a{
     position: relative;
     padding: 20px 40px;
     text-decoration: none;
-    color: white;
-    font-size: 26px;
+    color: black;
+    font-size: 23px;
 }
 
 ul li  a::after {
@@ -93,7 +99,7 @@ ul li  a::after {
 }
 
 ul li a:hover::after {
-    width: 38%;
+    width: 36%;
 
 }
 
@@ -102,6 +108,108 @@ ul li a:active::after {
     transition: 0.3s;
     width: 57%;
 
+}
+
+
+
+.oui {  
+    font-size: 0;
+    border : 3px ;  
+    border-bottom: solid  rgb(1, 99, 177);
+    border-radius: 8%;
+    padding: 6%;  
+         
+
+}
+
+#divform{
+    margin: auto;
+    margin-top: 2%;
+    border : 3px solid rgb(1, 99, 177);
+    border-radius: 20px / 10px;
+    width: 600px;
+    padding: 2%;
+  
+    
+  }
+
+.infos {
+    margin-right: -85px;
+    font-size: 18px;
+    font-weight:bold;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+footer {
+    margin-top: 100px;
+    background-color: #2c4e70;
+    color: #fff;
+}
+
+#copyright{
+    display: flex;
+    justify-content: left;
+    border-top: #fff solid 1px;
+    padding: 10px;
+    
+}
+
+#titre1
+{ font-size: 25px;
+
+}
+
+
+.Quisommesnous{
+    padding: 5% 5% 5% 5%;
+    text-align: left;
+    margin-left: 2%;
+    font-size: 150%;
+}
+
+.Quelqueschiffres{
+    padding: 5% 5% 5% 5%;
+    text-align: right;
+    margin-right: 0%;
+    font-size: 150%;
+    background: rgba(223, 223, 223, 0.842);
+    padding: 5% 5% 5% 5%;
+}
+
+.Notreobjectif
+{
+    padding: 5% 5% 5% 5%;
+    text-align: left;
+    margin-left: 2%;
+    font-size: 150%;
+}
+
+
+
+.pollution{
+    
+    width: 10%;
+    margin-top: 100px;
+    margin-right: 20%;
+    float: right;
+}
+
+.station{
+    
+    width: 10%;
+    margin-top: -300px;
+    margin-left: 15%;
+    float: left;
+}
+
+.Clio2-Phase2-80cv-Diesel-sahquelplaisir-a-conduire
+{
+    width: 10%;
+    margin-top: -150px;
+    margin-right: 20%;
+    float: right;
 }
 
 /*----------FOOTER----------*/
