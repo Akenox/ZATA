@@ -1,25 +1,10 @@
 <?php
 
+require_once('../fonctions.php');
 session_start();
 
 
-if ($_SESSION['bdd'] == "local")
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'root', 
-        '' 
-    );
-}
-else
-{
-    $bdd = new PDO(
-        'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
-        'grp-223', 
-        'nkksqopb' 
-    );
-}
-
+$bdd = Fonctions::InitBDD();
 
 include_once("inscription.html");
 
@@ -36,13 +21,9 @@ if(isset($_POST['submit']))
     $motdepasse = $_POST['password'];
     $naissance = $_POST['naissance'];
 
-    $reqIdExists = 'SELECT Identifiant FROM Compte WHERE Identifiant = :idTyped';
-    $reqPending = $bdd->prepare($reqIdExists);
-    $reqPending->execute([
-        'idTyped' => $identifiant,
+    $param[0] = $identifiant;
+    $result = Fonctions::RequeteSQLFetch($bdd, 'SELECT Identifiant FROM Compte WHERE Identifiant = ?', $param);
 
-    ]);
-    $result = $reqPending->fetch();
     if (isset($result['Identifiant']))
     {
         echo '<style> 
@@ -52,19 +33,12 @@ if(isset($_POST['submit']))
     }
     else 
     {
-        $requete = 'INSERT INTO Compte(Prenom, Nom, Email, Numero, Identifiant, MotDePasse, DateDeNaissance)  VALUES (:Prenom, :Nom, :Email, :Numero, :Identifiant, :MotDePasse, :DateDeNaissance)';
+        $parametre = array($prenom,$nom,$email,$numero,$identifiant,$motdepasse,$naissance);
+        Fonctions::RequeteSqlExecute(
+            $bdd, 
+            'INSERT INTO Compte(Prenom, Nom, Email, Numero, Identifiant, MotDePasse, DateDeNaissance)  VALUES (?,?,?,?,?,?,?)', 
+            $parametre);
 
-        $insertRecipe = $bdd->prepare($requete);
-
-        $insertRecipe->execute([
-            'Prenom' => $prenom,
-            'Nom' => $nom,
-            'Email' => $email,
-            'Numero' => $numero,
-            'Identifiant' => $identifiant,
-            'MotDePasse' => $motdepasse,
-            'DateDeNaissance' => $naissance,
-        ]);
         header('location:../connexion/connexion.html');
     }
 
