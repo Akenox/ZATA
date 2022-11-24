@@ -141,6 +141,7 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
             <th>Assurance</th>
             <th>Puissance</th>
             <th>Age Parc</th>
+            <th>details</th>
            <!-- <th>Details</th> -->
         <tr>
     

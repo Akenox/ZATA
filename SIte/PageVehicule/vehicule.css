@@ -130,7 +130,7 @@ ul li a:active::after {
 }
 
 .bout a:hover{
-    background-color: rgb(1, 99, 177);
+    background-color: #212529;
     color: white;
 }
 
@@ -174,8 +174,11 @@ ul li a:active::after {
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
-
-
+#coul{
+    background-color: #212529;
+    
+    color: white;
+}
 
 
 
@@ -183,12 +186,16 @@ ul li a:active::after {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    background-color: rgb(125, 164, 236);
+    background-color: white;
+    text-align: center;
+    
     
 }
+
 #listcar > td,th,tr{
-    border: 1px solid black;
+   
     padding: 10px;
+    
 }
 
 #addcar{
