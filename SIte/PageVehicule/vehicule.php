@@ -124,13 +124,13 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
         </nav>
         
      <h1>Liste de véhicules</h1>
-    
+    <br><br>
 
 
 
 
      <table id="listcar">
-        <tr>
+        <tr id="coul">
             <th>Marque</th>
             <th>Modele</th>
             <th>Immatriculation</th>
@@ -150,10 +150,11 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
         ?>
         
      </table>    
-     <br>
-     <p class="vec">
+     <br><br>
+     
+     <div class="bout"> 
      <a href="AddCar/AddCar.html" >Ajouter un véhicule</a>
-     </p>
+     </div>
      </div>
 
 

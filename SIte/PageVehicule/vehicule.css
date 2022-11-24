@@ -14,13 +14,12 @@
     background-size:  cover;
     background-position: center;
     font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
 
-.vec{
-    text-align: center;
-}
+
 
 nav{
     display: flex;
@@ -111,6 +110,38 @@ ul li a:active::after {
     width: 57%;
 
 }
+.bout a {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    text-decoration:none ;
+    color : black;
+    border: 1px solid black;
+    
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0 7px rgb(182, 214, 243);
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 2;
+    margin-left: 44%;
+    margin-right: 44%;
+}
+
+.bout a:hover{
+    background-color: rgb(1, 99, 177);
+    color: white;
+}
+
+.bout a:active{
+    background-color: rgb(1, 99, 177);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+
 
 
 
@@ -152,6 +183,7 @@ ul li a:active::after {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
+    background-color: rgb(125, 164, 236);
     
 }
 #listcar > td,th,tr{
@@ -163,8 +195,6 @@ ul li a:active::after {
     margin-left: auto;
     margin-right: auto;
 }
-
-
 
 /*----------FOOTER----------*/
 
