@@ -11,7 +11,7 @@ class Date{
         $req = $bdd->query('SELECT Id, Nom, date, Véhicule, Nombre_covoit FROM reservation WHERE YEAR(date)='.$year);
         $r = array();
         while($d = $req->fetch(PDO::FETCH_OBJ)){
-            $r[strtotime($d->date)][$d->Id] = $d -> Nom;
+            $r[strtotime($d->date)][$d->Id] = $d -> Nom . " || " . " Covoit à " . $d->Nombre_covoit . " Personnes.";
         }
         return $r;
     }

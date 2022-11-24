@@ -10,10 +10,16 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    background-size: auto;
+    background-image: url("../res/fond1.jpg");
+    background-size:  cover;
     background-position: center;
+    font-size: large;
+
+}
 
 
+.vec{
+    text-align: center;
 }
 
 nav{
@@ -22,7 +28,7 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     padding: 5px 0%;
-   background-color: rgba(109, 130, 175, 0.5);  
+    background-color: rgba(255, 255, 255, 0.5);
 
 }
 
