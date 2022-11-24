@@ -8,7 +8,7 @@ class Date{
     function getEvents($year){
 
         global $bdd;
-        $req = $bdd->query('SELECT Id,Nom,date FROM reservation WHERE YEAR(date)='.$year);
+        $req = $bdd->query('SELECT Id, Nom, date, Véhicule, Nombre_covoit FROM reservation WHERE YEAR(date)='.$year);
         $r = array();
         while($d = $req->fetch(PDO::FETCH_OBJ)){
             $r[strtotime($d->date)][$d->Id] = $d -> Nom;
