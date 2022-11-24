@@ -8,44 +8,81 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Ajouter un véhicule</h2>
-    <form action="AddCar.php" method="POST">
-
-        <label for="marque">Marque : </label>
-        <input name="marque" type="text">
-        <br>
-        <label for="modele">Modele : </label>
-        <input name="modele" type="text">
-        <br>
-        <label for="immatriculation">Immatriculation : </label>
-        <input name="immatriculation" type="text">
-        <br>
-        <label for="site">Site : </label>
-        <input name="site" type="text">
-        <br>
-        <label for="carburant">Carburant : </label>
-        <input name="carburant" type="text">
-        <br>
-        <label for="miseenservice">Date de mise en service : </label>
-        <input name="miseenservice" type="date">
-        <br>
-        <label for="critair">Vignette critair : </label>
-        <input name="critair" type="text">
-        <br>
-        <label for="assurance">Assurance : </label>
-        <input name="assurance" type="number">
-        <br>
-        <label for="puissance">Puissance : </label>
-        <input name="puissance" type="number">
-        <br>
-        <label for="ageparc">Age du parc : </label>
-        <input name="ageparc" type="number">
-        <br>
-        <input name="submit" type="submit" value="Valider">
-
-    </form>
-
-    <a id="retour" href="../vehicule.php"> Retour </a>
+    <div class="container">
+        <nav>
+            <img src="../../res/logo.png" class="logo" alt="">
+            <ul>
+                <li><a href="../../accueil/PageAccueil.php">Accueil</a></li>
+            </ul>
+            <a href="../../Compte/PageCompte.php"><img  src="../../res/compte.png" class="compte" alt="" ></a>
+        </nav>
     
+    <div class = "form">
+        <h2>Ajouter un véhicule</h2>
+        <form action="AddCar.php" method="POST">
+
+            <label for="marque">Marque : </label>
+            <input name="marque" type="text">
+            <br>
+            <label for="modele">Modele : </label>
+            <input name="modele" type="text">
+            <br>
+            <label for="immatriculation">Immatriculation : </label>
+            <input name="immatriculation" type="text">
+            <br>
+            <label for="site">Site : </label>
+            <input name="site" type="text">
+            <br>
+            <label for="carburant">Carburant : </label>
+            <input name="carburant" type="text">
+            <br>
+            <label for="miseenservice">Date de mise en service : </label>
+            <input name="miseenservice" type="date">
+            <br>
+            <label for="critair">Vignette critair : </label>
+            <input name="critair" type="text">
+            <br>
+            <label for="assurance">Assurance : </label>
+            <input name="assurance" type="number">
+            <br>
+            <label for="puissance">Puissance : </label>
+            <input name="puissance" type="number">
+            <br>
+            <label for="ageparc">Age du parc : </label>
+            <input name="ageparc" type="number">
+            <br>
+            <input name="submit" type="submit" value="Valider">
+
+        </form>
+    </div>
+
+
+    <a id="retour" href="../vehicule.php"> Retour </a>  
+    
+
+     <!-- FOOTER -->
+
+     <footer>
+        <div id="divtopfooter">
+        <div id="divhelp">
+            <span id="needhelptext">Besoin d'aide ? </span>
+            <a id="needhelplink" href="#">Contactez-nous !</a> 
+        </div>
+        <a id="policonf" href="../PoliConf/policonf.html">Politique de confidentialité<a>
+        <div id="langue">
+            <label for="langues">Langue:</label>
+            <select name="langues" id="">
+            <option value="">Français</option>
+            <option value="">Anglais</option>
+            </select>
+        </div>
+        </div>
+        
+        <p id="copyright">Copyright 2022 -- AirPur -- Tous droits réservés</p>
+
+    </footer>
+
+    <!-- FOOTEREND -->
+</div>
 </body>
 </html>
