@@ -36,7 +36,7 @@ if(!table_ok("reservation", $bdd))
 
     Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE reservation ADD PRIMARY KEY (ID);");
 
-    Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE reservation MODIFY ID int(10) NOT NULL AUTO_INCREMENT",$bdd);
+    Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE reservation MODIFY ID int(10) NOT NULL AUTO_INCREMENT");
     
     Fonctions::RequeteSQLExecute($bdd,"COMMIT");
 
