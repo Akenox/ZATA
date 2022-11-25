@@ -40,17 +40,15 @@ if(!table_ok("Vehicule", $bdd))
             Critair int(11) NOT NULL,
             Assurance year(4) NOT NULL,
             Puissance int(11) NOT NULL,
-            AgeParc float NOT NULL
+            AgeParc Decimal NOT NULL
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
     
 
     Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vehicule ADD PRIMARY KEY (ID);");
 
-    Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vehicule MODIFY ID int(10) NOT NULL AUTO_INCREMENT",$bdd);
+    Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vehicule MODIFY ID int(10) NOT NULL AUTO_INCREMENT");
     
     Fonctions::RequeteSQLExecute($bdd,"COMMIT");
-
-
     
 }
 
@@ -79,10 +77,12 @@ function CarTable($bdd) : string
                     <td>" . $reqres[8] . "</td>
                     <td>" . $reqres[9] . "</td>
                     <td>" . $reqres[10] . "</td>
-                    <td> <button onclick=\"details($reqres[0]);\">Details</button>
+                    <td> <a></a><button onclick=\"details($reqres[0]);\">Details</button>
                   <tr>
                     ";
+            $_SESSION['i'] = $i[0];
             $i[0]++;
+            
         }
         else{
             $bool = false;
@@ -121,6 +121,8 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
             </ul>
             <a href="../Compte/PageCompte.php"><img  src="../res/compte.png" class="compte" alt="" ></a>
         </nav>
+   
+
         
      <h1>Liste de véhicules</h1>
     <br><br>
@@ -128,6 +130,9 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
 
 
 
+
+
+=======
      <table id="listcar">
         <tr id="coul">
             <th>Marque</th>
