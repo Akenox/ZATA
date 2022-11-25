@@ -118,7 +118,6 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
             <img src="../res/logo.png" class="logo" alt="">
             <ul>
                 <li><a href="../accueil/PageAccueil.php">Accueil</a></li>
-                <li><a href="Deconnexon.php">Se Deconnecter</a></li>
             </ul>
             <a href="../Compte/PageCompte.php"><img  src="../res/compte.png" class="compte" alt="" ></a>
         </nav>

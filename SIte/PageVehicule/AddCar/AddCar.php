@@ -47,6 +47,8 @@ echo
 if (isset($_POST['submit']))
 {
     require_once('AddCar.html');
+
+    header('location:../vehicule.php');
 }
 
 
