@@ -39,7 +39,7 @@ echo "
 </ul>
 </div>
 
-    <div id=\"divform1_\">
+    <div id=\"divform1\">
 <ul>
 
     <li class=\"oui\"><a > Email : </a><a class=\"infos\"> $email</a></li>
@@ -68,9 +68,9 @@ echo "
         <a id=\"policonf\" href=\"../PoliConf/policonf.html\">Politique de confidentialité<a>
         <div id=\"langue\">
             <label for=\"langues\"> Langue : </label>
-            <select name=\"langues\" id="">
-            <option value="">Français</option>
-            <option value="">Anglais</option>
+            <select name=\"langues\" id=\"\">
+            <option value=\"\">Français</option>
+            <option value=\"\">Anglais</option>
             </select>
         </div>
     </div>
