@@ -79,7 +79,8 @@ ul li a{
     padding: 20px 40px;
     text-decoration: none;
     color: black;
-    font-size: 23px;
+    font-size: 40px;
+    
 }
 
 .animation::after {
@@ -108,33 +109,40 @@ ul li a{
 
 
 
-.oui {  
+.oui 
+{  
     font-size: 0;
     border : 3px ;  
-    border-bottom: solid  rgb(1, 99, 177);
+    margin-right: 30%;
+    width:600px;
+    height: 80%;
+    background:#e6e6e68f;
+    border-radius:8px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding:60px 40px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    position:relative;
     border-radius: 8%;
-    padding: 6%;  
-         
-
+    padding: 10%;
+    transition: all .3s;
+    
 }
 
-#divform{
-    margin: auto;
-    margin-top: 2%;
-    border : 3px solid rgb(1, 99, 177);
-    border-radius: 20px / 10px;
-    width: 600px;
-    padding: 2%;
-  
-    
-  }
+.oui:hover
+{
+    background-color : #e6e6e600;
+    color: #000000;
+}
+
 
 .infos {
     margin-right: -85px;
-    font-size: 18px;
+    font-size: 35px;
     font-weight:bold;
     color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Montserrat',sans-serif;   
 
 }
 
@@ -205,3 +213,88 @@ footer {
 }
 
 /*----------FOOTER----------*/
+
+/*----------TABLEAU----------*/
+
+#divform
+{
+    margin-left: 15%;
+    width:700px;
+    height: 30%;
+    background:#e6e6e68f
+    ;border-radius:8px;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    padding:60px 40px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative;
+}
+
+#divform1
+{
+    margin-left: 65%;
+    width:700px;
+    height: 35%;
+    background:#e6e6e68f
+    ;border-radius:8px;
+    margin-bottom: 2%;
+    margin-top: -17.5%;
+    padding:60px 40px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative;
+}
+
+#divform2
+{
+    margin-left: 40%;
+    width:700px;
+    height: 50%;
+    background:#e6e6e68f
+    ;border-radius:8px;
+    margin-bottom: 2%;
+    margin-top: -20.1%;
+    padding:60px 40px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative;
+}
+
+
+label
+{
+    font-family:'Montserrat',sans-serif;
+    font-size: large;
+}
+
+
+input:hover
+{
+    background : #c7c5c5;
+    color : #000000 ; 
+}
+
+p:before
+{
+    content:attr(type);
+    display:block;
+    margin:28px 0 0;
+    font-size:14px;
+    color:#5a5a5a
+}
+
+
+
+
+span
+{
+    margin:0 5px 0 15px;
+}
+
+
+
+/*----------TABLEAU----------*/
