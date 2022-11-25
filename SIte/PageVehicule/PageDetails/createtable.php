@@ -70,6 +70,61 @@ class CreateTable
         Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
         }
     }
+
+    public static function CreateTableVidange($bdd)
+    {
+        if(!self::table_ok("Vidange", $bdd))
+        {
+        Fonctions::RequeteSQLExecute($bdd,
+            "CREATE TABLE Vidange (
+                ID int(10) NOT NULL,
+                CadenceVidange int(10) NOT NULL,
+                KmDerniereVidange  int(10) NOT NULL,
+                VidangeAFaire BOOLEAN NOT NULL,
+                IDVehicule int(11) NOT NULL
+    
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+        
+    
+        Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vidange
+                                            ADD PRIMARY KEY (ID),
+                                            ADD KEY IDVehicule (IDVehicule);");
+    
+        Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vidange MODIFY ID int(10) NOT NULL AUTO_INCREMENT;");
+        
+        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Vidange ADD CONSTRAINT IDVehicule FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
+    
+        Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
+        }
+    }
+
+    public static function CreateTableIntervention($bdd)
+    {
+        if(!self::table_ok("Intervention", $bdd))
+        {
+            Fonctions::RequeteSQLExecute($bdd,
+                "CREATE TABLE Intervention(
+                    ID int(10) NOT NULL,
+                    Date date NOT NULL,
+                    Cout decimal NOT NULL,
+                    Kilometre int(10),
+                    Description TEXT,
+                    IDVehicule int(11) NOT NULL
+                    
+                    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
+            Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Intervention
+                                                ADD PRIMARY KEY (ID),
+                                                ADD KEY IDVehicule (IDVehicule);");
+
+            Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Intervention MODIFY ID int(10) NOT NULL AUTO_INCREMENT;");
+        
+            Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Intervention ADD CONSTRAINT IDVehicule FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
+
+            Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
+        }
+
+    }
    
 
 

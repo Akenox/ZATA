@@ -27,11 +27,12 @@ class Fonctions
         return $bdd;
     }
 
-    public static function RequeteSQLFetch(PDO $bdd,string $req, array $param = null)
+    public static function RequeteSQLFetch(PDO $bdd,string $req, array $param = null, $all = false)
     {
         $req = $bdd->prepare($req);
         $req->execute($param);
-        return $req->fetch();
+        if ($all == false ) return $req->fetch();
+        else return $req->fetchAll();
     }
     public static function RequeteSQLExecute(PDO $bdd,string $req, array $param = null)
     {

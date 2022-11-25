@@ -121,25 +121,20 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
             </ul>
             <a href="../Compte/PageCompte.php"><img  src="../res/compte.png" class="compte" alt="" ></a>
         </nav>
-<<<<<<< HEAD
-    <h1>Liste de véhicules</h1>
-    
-=======
+   
+
         
      <h1>Liste de véhicules</h1>
     <br><br>
->>>>>>> 6758db346fd4fd00413bcd9782b59ff854cff78b
 
 
 
 
-<<<<<<< HEAD
-    <table id="listcar">
-        <tr>
+
+
 =======
      <table id="listcar">
         <tr id="coul">
->>>>>>> 6758db346fd4fd00413bcd9782b59ff854cff78b
             <th>Marque</th>
             <th>Modele</th>
             <th>Immatriculation</th>
@@ -159,13 +154,6 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
         echo $_SESSION['function'];
         ?>
         
-<<<<<<< HEAD
-    </table>    
-    <a href="AddCar/AddCar.html">Ajouter un véhicule</a>
-
-
-
-=======
      </table>    
      <br><br>
      
@@ -173,7 +161,6 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
      <a href="AddCar/AddCar.html" >Ajouter un véhicule</a>
      </div>
      </div>
->>>>>>> 6758db346fd4fd00413bcd9782b59ff854cff78b
 
 
 
