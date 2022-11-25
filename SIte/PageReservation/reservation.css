@@ -162,7 +162,7 @@ body{  background:#EEEEEE;  letter-spacing:1px;  font-family:Helvetica; }
 .month{  margin-top:12px; margin-left: 2%;}
 .months ul{  list-style:none;  margin:0px;  padding:0px;}
 .months ul li a{  float:left;  margin:-1px;  padding:0px 15px 0px 0px;  color:#888888;  text-decoration:none;  font-size:35px;  font-weight:bold;  text-transform:uppercase;}
-.months ul li a:hover, .months ul li a.active{  color:#2c4e70;;}
+.months ul li a:hover, .months ul li a.active{  color:#2c4e70;}
 table{  border-collapse:collapse;}
 table td{  border:1px solid #A3A3A3;  width:80px;  height:80px;}
 table td.today{  border:2px solid #2c4e70;;  width:80px;  height:80px;}
@@ -177,6 +177,7 @@ table td:hover .events li{  height:40px;  line-height:40px;  font-weight:bold;  
 table td:hover .events li:first-child{  border-top:1px solid #D6D6D6;}
 table td .daytitle{  display:none;}
 table td:hover .daytitle{  position: absolute; left:582px;  top: 45%;  width:442px;  list-style:none;  margin:auto; margin-left: 2%; padding:0px;  color:black;  font-size:30px;  display:block;  font-weight:bold;}
+
 .clear{  clear:both;}
 
 

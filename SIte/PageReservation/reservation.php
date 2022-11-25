@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Reservation.css"/>
+    <link rel="stylesheet" type="text/css" href="reservation.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script type="text/javascript">
          
@@ -62,7 +62,7 @@
         <form action="config.php" method="POST"> 
                     <div id="divform" > 
                         <div class="divinput">
-                            <input type="text"  class="textinput" name="nom" required  placeholder="Véhicule"> <br>
+                            <input type="text"  class="textinput" name="nom"   placeholder="Véhicule"> <br>
                         </div>
                         <div class="divinput">
                             <input type="date"  class="textinput" name="date"  required placeholder="Date de réservation">  
@@ -117,7 +117,7 @@
                                 <div class="events">
                                     <?php  if(isset($events[$time])) : foreach($events[$time] as $e):  ?>
                                         <li> <?php  echo $e; ?>
-                                        <a href="#">Annuler ma réservation</a>
+                                       
                                         </li> 
                                     <?php endforeach; endif;?>
                                 </div>
