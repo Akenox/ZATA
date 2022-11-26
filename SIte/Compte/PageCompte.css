@@ -73,14 +73,12 @@ nav ul li{
     margin-right: 10px;
 
 }
-
-ul li a{
+.animation{
     position: relative;
     padding: 20px 40px;
     text-decoration: none;
     color: black;
     font-size: 40px;
-    
 }
 
 .animation::after {
@@ -108,43 +106,69 @@ ul li a{
 }
 
 
+/* Tableau infos personnelles */
 
-.oui 
-{  
-    font-size: 0;
-    border : 3px ;  
-    margin-right: 30%;
-    width:600px;
-    height: 80%;
-    background:#e6e6e68f;
-    border-radius:8px;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    padding:60px 40px;
-    max-width:calc(100vw - 40px);
-    box-sizing:border-box;
-    position:relative;
-    border-radius: 8%;
-    padding: 10%;
-    transition: all .3s;
+#tableau{
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    background-color: rgba(109, 130, 175, 0.5);
+    padding: 3%;
+    border-radius:  30px;
+}
+
+#entete{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.colonnedroite
+{   
     
+    padding: 3%;
+    margin: 3%;
+    width: 40%;
+    text-align: left;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+.colonnegauche
+{   
+    padding: 3%;
+    width: 40%;
+    text-align: right;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
 }
 
-.oui:hover
-{
-    background-color : #e6e6e600;
-    color: #000000;
+.ligne{
+  font-size: 40px;
+  background:#e6e6e68f;
+  border-radius:50px;
+  font-size: 10px;
+
+ 
 }
-
-
 .infos {
-    margin-right: -85px;
-    font-size: 35px;
+ 
+    font-size: 30px;
     font-weight:bold;
     color: black;
     font-family: 'Montserrat',sans-serif;   
-
 }
+
+.titre{
+    font-size: 30px;
+}
+
+/* Tableau infos personnelles fin*/
+
 
 /*----------FOOTER----------*/
 
@@ -213,88 +237,3 @@ footer {
 }
 
 /*----------FOOTER----------*/
-
-/*----------TABLEAU----------*/
-
-#divform
-{
-    margin-left: 15%;
-    width:700px;
-    height: 30%;
-    background:#e6e6e68f
-    ;border-radius:8px;
-    margin-bottom: 2%;
-    margin-top: 5%;
-    padding:60px 40px;
-    max-width:calc(100vw - 40px);
-    box-sizing:border-box;
-    font-family:'Montserrat',sans-serif;
-    position:relative;
-}
-
-#divform1
-{
-    margin-left: 65%;
-    width:700px;
-    height: 35%;
-    background:#e6e6e68f
-    ;border-radius:8px;
-    margin-bottom: 2%;
-    margin-top: -17.5%;
-    padding:60px 40px;
-    max-width:calc(100vw - 40px);
-    box-sizing:border-box;
-    font-family:'Montserrat',sans-serif;
-    position:relative;
-}
-
-#divform2
-{
-    margin-left: 40%;
-    width:700px;
-    height: 50%;
-    background:#e6e6e68f
-    ;border-radius:8px;
-    margin-bottom: 2%;
-    margin-top: -20.1%;
-    padding:60px 40px;
-    max-width:calc(100vw - 40px);
-    box-sizing:border-box;
-    font-family:'Montserrat',sans-serif;
-    position:relative;
-}
-
-
-label
-{
-    font-family:'Montserrat',sans-serif;
-    font-size: large;
-}
-
-
-input:hover
-{
-    background : #c7c5c5;
-    color : #000000 ; 
-}
-
-p:before
-{
-    content:attr(type);
-    display:block;
-    margin:28px 0 0;
-    font-size:14px;
-    color:#5a5a5a
-}
-
-
-
-
-span
-{
-    margin:0 5px 0 15px;
-}
-
-
-
-/*----------TABLEAU----------*/

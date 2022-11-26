@@ -66,6 +66,7 @@ function CarTable($bdd) : string
         $reqres = Fonctions::RequeteSQLFetch($bdd, 'SELECT*FROM Vehicule WHERE ID = ?', $i);
         if (isset($reqres[1]))
         {
+            
             $res .= "<tr>
                     <td>" . $reqres[1] . "</td>
                     <td>" . $reqres[2] . "</td>
@@ -77,7 +78,7 @@ function CarTable($bdd) : string
                     <td>" . $reqres[8] . "</td>
                     <td>" . $reqres[9] . "</td>
                     <td>" . $reqres[10] . "</td>
-                    <td> <a></a><button onclick=\"details($reqres[0]);\">Details</button>
+                    <td> <a></a><button>Details</button>
                   <tr>
                     ";
             $_SESSION['i'] = $i[0];
@@ -104,13 +105,6 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="vehicule.css">
     <title>Document</title>
-    <script>
-        function details(id)
-        {
-            document.location.href="PageDetails/detail.php";
-            $_SESSION['idCar'] = id;
-        }
-    </script>
 </head>
 <body>
     <div class="container">
