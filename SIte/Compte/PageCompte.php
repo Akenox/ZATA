@@ -26,37 +26,46 @@ $naissance = $infos['DateDeNaissance'];
 $prenom[0] = strtoupper($prenom[0]);
 $nom[0] = strtoupper($nom[0]);
 
-
 echo "
+    <link rel=\"stylesheet\" href=\"PageCompte.css\">
 
-<link rel=\"stylesheet\" href=\"PageCompte.css\">
+    <table id = \"tableau\">
+        <tr>
+            <th id=\"entete\" colspan=\"2\">Informations du compte</th>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\"><a  class = \"titre\">Nom : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $nom </a></td>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\"><a  class = \"titre\">Prenom : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $prenom </a></td>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\" ><a  class = \"titre\">Email : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $email </a></td>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\" ><a  class = \"titre\">Numéro : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $num </a></td>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\" ><a  class = \"titre\">Date de naissance : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $naissance </a></td>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\" ><a  class = \"titre\">Identifiant : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $id </a></td>
+        </tr>
+        <tr class = \"ligne\">
+            <td class = \"colonnegauche\" ><a  class = \"titre\">Mot de passe : </a></td>
+            <td class = \"colonnedroite\"> <a class=\"infos\"> $mdp </a></td>
+        </tr>
+        
+    </table>
+    
 
-
-<div id=\"divform\">
-<ul>
-    <li class=\"oui\"><a >   Nom : </a> <a class=\"infos\"> $prenom </a> </li>
-    <li class=\"oui\"><a >Prénom :</a><a class=\"infos\"> $nom</a></li>
-</ul>
-</div>
-
-    <div id=\"divform1\">
-<ul>
-
-    <li class=\"oui\"><a > Email : </a><a class=\"infos\"> $email</a></li>
-    <li class=\"oui\"><a >Numéro : </a><a class=\"infos\"> $num</a></li>
-
-</ul>
-</div>
-
-<div id=\"divform2\">
-<ul>
-    <li class=\"oui\"><a >Date de naissance : </a><a class=\"infos\"> $naissance </li>
-    <li class=\"oui\"><a > Identifiant : </a><a class=\"infos\"> $id </li>
-    <li class=\"oui\"><a >Mot de passe : </a><a class=\"infos\">$mdp</li>
-</ul>
-</div>
 ";
-
 
 echo "
 <footer>
