@@ -13,7 +13,7 @@ if (isset($_GET['action']))
 
 if (isset($_POST['submit']))
 {
-    $id = $_POST['id'];
+    if(isset($_POST['id'])){$id = $_POST['id'];}
     $marque = $_POST['marque'];
     $modele = $_POST['modele'];
     $immatriculation = $_POST['immatriculation'];
@@ -33,7 +33,7 @@ if (isset($_POST['submit']))
         $requete = 'UPDATE Vehicule SET Marque = ?, Modele= ?, Immatriculation= ?, Site= ?, Carburant= ?, MiseEnService= ?, Critair= ?, Assurance= ?, Puissance= ?, AgeParc= ? WHERE ID = ?';
 
         Fonctions::RequeteSQLExecute($bdd, $requete,$param);
-
+        Fonctions::RequeteSQLExecute($bdd, 'COMMIT');
     }
 
     else
@@ -43,6 +43,7 @@ if (isset($_POST['submit']))
         $requete = 'INSERT INTO Vehicule(Marque, Modele, Immatriculation, Site, Carburant, MiseEnService, Critair, Assurance, Puissance, AgeParc) VALUES (?,?,?,?,?,?,?,?,?,?)';
 
         Fonctions::RequeteSQLExecute($bdd, $requete,$param);
+        Fonctions::RequeteSQLExecute($bdd, 'COMMIT');
 
         echo    
             '<style>
