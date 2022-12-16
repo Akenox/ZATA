@@ -93,9 +93,6 @@ function CarTable($bdd) : string
                     <td> <a href=\"AddCar/AddCar.php?action=edit&idVehicule=" . $reqres[0] . "\">Edit  ||  </a><a href=\"vehicule.php?action=del&idVehicule=" . $reqres[0] . "\">Del</a></td>
                   <tr>
                     ";
-        
-        
-    
     return $res;
 }
 $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTable plus bas
