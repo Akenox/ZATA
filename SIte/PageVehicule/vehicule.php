@@ -23,14 +23,14 @@ if (isset($_GET['action']))
 {
     if ($_GET['action'] == "del")
     {
-    $param = array($_GET['idVehicule']);
-    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM courroie WHERE idVehicule = ?', $param);
-    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM infoct WHERE idVehicule = ?', $param);
-    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM vidange WHERE idVehicule = ?', $param);
-    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM intervention WHERE idVehicule = ?', $param);
-    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM vehicule WHERE ID = ?', $param);
+        $param = array($_GET['idVehicule']);
+        Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM courroie WHERE idVehicule = ?', $param);
+        Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM infoct WHERE idVehicule = ?', $param);
+        Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM vidange WHERE idVehicule = ?', $param);
+        Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM intervention WHERE idVehicule = ?', $param);
+        Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM vehicule WHERE ID = ?', $param);
 
-    Fonctions::RequeteSQLExecute($bdd, 'COMMIT');
+        Fonctions::RequeteSQLExecute($bdd, 'COMMIT');
     }
     
 }
@@ -71,16 +71,12 @@ if(!table_ok("Vehicule", $bdd))
 
 function CarTable($bdd) : string
 {
-    $bool = true;
     $res = "";
-    $i[0] = 2;
-    while($bool)
-    {
+    $reqresall = Fonctions::RequeteSQLFetch($bdd, 'SELECT*FROM Vehicule', null, true);
 
-
-        $reqres = Fonctions::RequeteSQLFetch($bdd, 'SELECT*FROM Vehicule WHERE ID = ?', $i);
-        if (isset($reqres[1]))
-        {
+    foreach ($reqresall as $reqres)
+    
+      
             
             $res .= "<tr>
                     <td>" . $reqres[1] . "</td>
@@ -97,17 +93,13 @@ function CarTable($bdd) : string
                     <td> <a href=\"AddCar/AddCar.php?action=edit&idVehicule=" . $reqres[0] . "\">Edit  ||  </a><a href=\"vehicule.php?action=del&idVehicule=" . $reqres[0] . "\">Del</a></td>
                   <tr>
                     ";
-            $_SESSION['i'] = $i[0];
-            $i[0]++;
-            
-        }
-        else{
-            $bool = false;
-        }
-    }
+        
+        
+    
     return $res;
 }
 $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTable plus bas
+$tableVehicule = CarTable($bdd);
 
 
 
@@ -161,7 +153,7 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
     
 
         <?php
-        echo $_SESSION['function'];
+        echo $tableVehicule;
         ?>
         
      </table>    

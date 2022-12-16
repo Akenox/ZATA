@@ -43,9 +43,10 @@
 
     <?php 
        require('config.php');
+       require_once
 
        $date = new Horaire();
-       $year = date('Y')+1 ;
+       $year = date('Y') ;
 
        $events = $date->getEvents($year);
        $dates = $date->getAll($year);
