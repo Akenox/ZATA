@@ -17,7 +17,22 @@ function table_ok($table, $bdd){
     else{
         return false;
     }
+}
 
+if (isset($_GET['action']))
+{
+    if ($_GET['action'] == "del")
+    {
+    $param = array($_GET['idVehicule']);
+    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM courroie WHERE idVehicule = ?', $param);
+    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM infoct WHERE idVehicule = ?', $param);
+    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM vidange WHERE idVehicule = ?', $param);
+    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM intervention WHERE idVehicule = ?', $param);
+    Fonctions::RequeteSQLExecute($bdd, 'DELETE FROM vehicule WHERE ID = ?', $param);
+
+    Fonctions::RequeteSQLExecute($bdd, 'COMMIT');
+    }
+    
 }
 
 function Detail()
@@ -78,7 +93,8 @@ function CarTable($bdd) : string
                     <td>" . $reqres[8] . "</td>
                     <td>" . $reqres[9] . "</td>
                     <td>" . $reqres[10] . "</td>
-                    <td> <a></a><button>Details</button>
+                    <td> <a href=\"PageDetails/detail.php?idVehicule=" . $reqres[0] . "\">Details</a>
+                    <td> <a href=\"AddCar/AddCar.php?action=edit&idVehicule=" . $reqres[0] . "\">Edit  ||  </a><a href=\"vehicule.php?action=del&idVehicule=" . $reqres[0] . "\">Del</a></td>
                   <tr>
                     ";
             $_SESSION['i'] = $i[0];
@@ -126,7 +142,6 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
 
 
 
-=======
      <table id="listcar">
         <tr id="coul">
             <th>Marque</th>
@@ -139,7 +154,8 @@ $_SESSION['function'] = CarTable($bdd); // permet d'afficher la fonction CarTabl
             <th>Assurance</th>
             <th>Puissance</th>
             <th>Age Parc</th>
-            <th>details</th>
+            <th>Details</th>
+            <th>Outils</th>
            <!-- <th>Details</th> -->
         <tr>
     

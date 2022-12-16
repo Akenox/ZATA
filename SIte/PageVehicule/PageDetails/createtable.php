@@ -36,7 +36,7 @@ class CreateTable
     
         Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE infoct MODIFY ID int(10) NOT NULL AUTO_INCREMENT;");
         
-        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE infoct ADD CONSTRAINT IDVehicule FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
+        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE infoct ADD CONSTRAINT IDVehicule_FK1 FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
     
         Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
         }
@@ -65,7 +65,7 @@ class CreateTable
     
         Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Courroie MODIFY ID int(10) NOT NULL AUTO_INCREMENT;");
         
-        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Courroie ADD CONSTRAINT IDVehicule FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
+        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Courroie ADD CONSTRAINT IDVehicule_FK2 FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
     
         Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
         }
@@ -92,7 +92,7 @@ class CreateTable
     
         Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Vidange MODIFY ID int(10) NOT NULL AUTO_INCREMENT;");
         
-        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Vidange ADD CONSTRAINT IDVehicule FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
+        Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Vidange ADD CONSTRAINT IDVehicule_FK3 FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
     
         Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
         }
@@ -119,7 +119,7 @@ class CreateTable
 
             Fonctions::RequeteSQLExecute($bdd,"ALTER TABLE Intervention MODIFY ID int(10) NOT NULL AUTO_INCREMENT;");
         
-            Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Intervention ADD CONSTRAINT IDVehicule FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
+            Fonctions::RequeteSQLExecute($bdd, "ALTER TABLE Intervention ADD CONSTRAINT IDVehicule_FK4 FOREIGN KEY (IDVehicule) REFERENCES vehicule (ID);");
 
             Fonctions::RequeteSQLExecute($bdd,"COMMIT;");
         }

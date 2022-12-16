@@ -8,7 +8,7 @@ class Fonctions
 
     public static function InitBDD() : PDO
     {
-        if (self::$bddplace == "local")
+        if (self::$bddplace == "iut")
         {
             $bdd = new PDO(
                 'mysql:host=localhost;dbname=grp-223_s3_sae;charset=utf8',
