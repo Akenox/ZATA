@@ -3,7 +3,7 @@
 class Fonctions
 {
 
-    private static string $bddplace = "local";
+    private static string $bddplace = "iut";
 
 
     public static function InitBDD() : PDO

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="reservation.css"/>
+    <link rel="stylesheet" type="text/css" href="Reservation.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script type="text/javascript">
          
@@ -24,11 +24,10 @@
                     }
                     return false; 
                });
-
          
             });
     </script>
-    <title>Calendrier</title>
+    <title>Calender</title>
 </head>
 <body>
 
@@ -44,32 +43,40 @@
 
     <?php 
        require('config.php');
-       require('Date.php');
 
-       $date = new Date();
-       $year = date('Y');
-
+       $date = new Horaire();
+       $year = date('Y')+1 ;
 
        $events = $date->getEvents($year);
        $dates = $date->getAll($year);
+
+
         
     ?>
 
     <div class="periods">
-        <div class="year"><?php echo $year?> </div>
+        <div class="year"><?php echo $year?>  </a ></div>
         <div class="months">
+
+       
 
         <form action="config.php" method="POST"> 
                     <div id="divform" > 
                         <div class="divinput">
-                            <input type="text"  class="textinput" name="nom"   placeholder="Véhicule"> <br>
+                        <!--<select  name="nom" placeholder="Véhicule" class="textinput" >
+                                <//?php  
+                                    echo $_SESSION['vehicule']; ?>
+                            </select> <br>-->
+                            <input type="text"  class="textinput" name="nom"  required placeholder="choisir un vehicule ">  
                         </div>
+
                         <div class="divinput">
                             <input type="date"  class="textinput" name="date"  required placeholder="Date de réservation">  
                         </div>
                         <div class="divinput">
                             <input type="number"  class="textinput" name="numbe"  required placeholder="Nombre de personne">  
                         </div>
+
                         <p id="submit">
                         <br>
                         <br>
@@ -80,6 +87,9 @@
                  <p id="popup"></p>
             </form> 
 
+
+            
+     
 
             <ul>
                 <?php foreach ($date->months as $id=>$m): ?>
@@ -136,6 +146,9 @@
 
             </div>
             <?php endforeach; ?>
+
+            <a href="historiqueRes.php" id="lien">réservation</a>
+
     </div>
 
 
