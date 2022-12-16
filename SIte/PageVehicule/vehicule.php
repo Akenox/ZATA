@@ -157,7 +157,7 @@ $tableVehicule = CarTable($bdd);
      <br><br>
      
      <div class="bout"> 
-     <a href="AddCar/AddCar.html" >Ajouter un véhicule</a>
+     <a href="AddCar/AddCar.php" >Ajouter un véhicule</a>
      </div>
      </div>
 
