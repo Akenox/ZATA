@@ -70,10 +70,12 @@
        $res = "<tr>";
        $param = array($idcar);
        $infos = Fonctions::RequeteSQLFetch($bdd,'SELECT DateDernierCT, DateComplementaireCT, DateProchainCT FROM infoct WHERE IDVehicule = ?', $param);
-       for ($i = 0;$i<3;$i++)
+       if($infos != false)
        {
-            $res .="<td>". $infos[$i] ."</td>";
-       }
+            $res .="<td>". $infos[0] ."</td>";
+            $res .="<td>". $infos[1] ."</td>";
+            $res .="<td>". $infos[2] ."</td>";
+        }
        $res.= "</tr>";
        return $res;
     }
@@ -84,10 +86,17 @@
        $res = "<tr>";
        $param = array($idcar);
        $infos = Fonctions::RequeteSQLFetch($bdd,'SELECT CadenceCourroie, KmDerniereCourroie, CourroieARemplacer FROM courroie WHERE IDVehicule = ?', $param);
-       for ($i = 0;$i<3;$i++)
+       if($infos != false)
        {
-            $res .="<td>". $infos[$i] ."</td>";
-       }
+            
+                    $res .="<td>". $infos[0] ."</td>";
+                    $res .="<td>". $infos[1] ."</td>";
+                    if($infos[2] == 1)
+                        $res .="<td> Oui </td>";
+                    else
+                        $res .="<td> Non </td>";
+            
+        }
        $res.= "</tr>";
        return $res;
     }
@@ -98,10 +107,17 @@
        $res = "<tr>";
        $param = array($idcar);
        $infos = Fonctions::RequeteSQLFetch($bdd,'SELECT CadenceVidange, KmDerniereVidange, VidangeAFaire FROM vidange WHERE IDVehicule = ?', $param);
-       for ($i = 0;$i<3;$i++)
+       if($infos != false)
        {
-            $res .="<td>". $infos[$i] ."</td>";
-       }
+            $res .="<td>". $infos[0] ."</td>";
+            $res .="<td>". $infos[1] ."</td>";
+            if($infos[2] == 1)
+                $res .="<td> Oui </td>";
+            else
+                $res .="<td> Non </td>";
+ 
+                    
+        }
        $res.= "</tr>";
        return $res;
     }
@@ -119,6 +135,15 @@
     <title>Document</title>
 </head>
 <body>
+
+    <nav>
+        <img src="../../res/logo.png" class="logo" alt="">
+        <ul>
+            <li><a href="../../accueil/PageAccueil.php">Accueil</a></li>
+        </ul>
+        <a href="../../Compte/PageCompte.php"><img  src="../../res/compte.png" class="compte" alt="" ></a>
+    </nav>
+
     <h1>Page Details</h1>
     <br>
     <br>
@@ -155,7 +180,7 @@
         </table>
         <br>
         <form action="ajoutDetail.php?idVehicule=<?=$_GET['idVehicule']?>" method="POST">
-            <input type="submit" name="submitVidange" value="Ajouter une donnée courroie"/>
+            <input type="submit" name="submitCourroie" value="Ajouter une donnée courroie"/>
         </form>
     </div>
 
@@ -176,7 +201,7 @@
         </table>
         <br>
         <form action="ajoutDetail.php?idVehicule =<?=$_GET['idVehicule']?>" method="POST">
-            <input type="submit" name="submitCourroie" value="Ajouter une donnée vidange"/>
+            <input type="submit" name="submitVidange" value="Ajouter une donnée vidange"/>
         </form>
     </div>
 
@@ -203,6 +228,30 @@
             <input type="submit" name="submitInter" value="Ajouter un incident"/>
         </form>
     </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div id="divtopfooter">
+        <div id="divhelp">
+            <span id="needhelptext">Besoin d'aide ? </span>
+            <a id="needhelplink" href="#">Contactez-nous !</a> 
+        </div>
+        <a id="policonf" href="../PoliConf/policonf.html">Politique de confidentialité<a>
+        <div id="langue">
+            <label for="langues">Langue:</label>
+            <select name="langues" id="">
+            <option value="">Français</option>
+            <option value="">Anglais</option>
+            </select>
+        </div>
+        </div>
+        
+        <p id="copyright">Copyright 2022 -- AirPur -- Tous droits réservés</p>
+    
+    </footer>
+
+    <!-- FOOTEREND -->
    
 </body>
 </html>

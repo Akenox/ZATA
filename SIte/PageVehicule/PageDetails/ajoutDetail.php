@@ -60,7 +60,7 @@ class ajoutDetail{
 
         }
         
-        $res .= "<input type=\"submit\" name=\"submit\"/>";
+        $res .= "<input id=\"button\" type=\"submit\" name=\"submit\"/>";
         $res .= "</form>";
         return $res;
         
@@ -120,9 +120,43 @@ class ajoutDetail{
 <title>Ajouter</title>
 </head>
 <body>
-    <?php
-    $ad = new ajoutDetail();
-    $ad->testForm($_POST)
-     ?>
+
+    <nav>   
+        <img src="../../res/logo.png" class="logo" alt="">
+        <ul>
+            <li><a href="../../accueil/PageAccueil.php">Accueil</a></li>
+        </ul>
+        <a href="../../Compte/PageCompte.php"><img  src="../../res/compte.png" class="compte" alt="" ></a>
+    </nav>
+
+    <div class = "form">
+        <?php
+        $ad = new ajoutDetail();
+        $ad->testForm($_POST)
+        ?>
+    </div>
+    <!-- FOOTER -->
+
+    <footer>
+        <div id="divtopfooter">
+        <div id="divhelp">
+            <span id="needhelptext">Besoin d'aide ? </span>
+            <a id="needhelplink" href="#">Contactez-nous !</a> 
+        </div>
+        <a id="policonf" href="../../PoliConf/policonf.html">Politique de confidentialité<a>
+        <div id="langue">
+            <label for="langues">Langue:</label>
+            <select name="langues" id="">
+            <option value="">Français</option>
+            <option value="">Anglais</option>
+            </select>
+        </div>
+        </div>
+        
+        <p id="copyright">Copyright 2022 -- AirPur -- Tous droits réservés</p>
+    
+    </footer>
+
+    <!-- FOOTEREND -->
 </body>
 </html>
